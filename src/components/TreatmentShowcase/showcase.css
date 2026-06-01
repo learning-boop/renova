@@ -259,61 +259,49 @@
 .ts-img-inner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
   display: block;
 }
 
-.ts-img-placeholder {
-  position: absolute;
-  inset: 0;
-  background: var(--sc-surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ═══════════════════════════════════════════
+   PANEL LAYOUT VARIANTS
+   v1: content left (58%), image right (42%)   — centred
+   v2: image left (42%), content right (58%)   — centred
+   v3: content left (38%), image right (62%)   — content bottom
+   v4: image left (62%), content right (38%)   — content top
+   ═══════════════════════════════════════════ */
+
+/* v1 — default, already defined above */
+.ts-panel--v1 .ts-panel-image { width: 42%; }
+
+/* v2 — flip order */
+.ts-panel--v2 {
+  flex-direction: row-reverse;
+}
+.ts-panel--v2 .ts-panel-image { width: 42%; }
+.ts-panel--v2 .ts-panel-content {
+  border-right: none;
+  border-left: 1px solid var(--sc-border);
 }
 
-.ts-img-placeholder__num {
-  font-family: 'Cormorant', Georgia, serif;
-  font-size: 64px;
-  font-weight: 300;
-  color: var(--sc-accent);
-  opacity: 0.18;
-  display: block;
-  line-height: 1;
-  text-align: center;
+/* v3 — image dominant right, content pinned to bottom */
+.ts-panel--v3 .ts-panel-image { width: 62%; }
+.ts-panel--v3 .ts-panel-content {
+  justify-content: flex-end;
+  padding-bottom: 72px;
 }
 
-.ts-img-placeholder__label {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 9px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--sc-dim);
-  display: block;
-  text-align: center;
-  margin-top: 10px;
+/* v4 — image dominant left, content pinned to top */
+.ts-panel--v4 {
+  flex-direction: row-reverse;
 }
-
-.ts-img-blend {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    to right,
-    var(--sc-bg) 0%,
-    transparent 16%,
-    transparent 84%,
-    rgba(245, 240, 232, 0.3) 100%
-  );
-}
-
-.ts-img-vignette {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 26%;
-  pointer-events: none;
-  background: linear-gradient(to top, rgba(245, 240, 232, 0.4) 0%, transparent 100%);
+.ts-panel--v4 .ts-panel-image { width: 62%; }
+.ts-panel--v4 .ts-panel-content {
+  justify-content: flex-start;
+  padding-top: 72px;
+  border-right: none;
+  border-left: 1px solid var(--sc-border);
 }
 
 /* ═══════════════════════════════════════════

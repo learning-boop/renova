@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import portraitImg from '../../data/images/eight.jpg';
 import './QuickContact.css';
+
+const portraitImg = '/assets/doctor_renove.png';
 
 export default function QuickContact() {
   const [name, setName]   = useState('');

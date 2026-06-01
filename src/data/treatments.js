@@ -3,7 +3,7 @@ const TREATMENTS = [
     num: '01',
     label: 'Smooth Lines',
     slug: 'smooth-lines',
-    image: '/images/treatments/smooth-lines.jpg',
+    image: '/assets/smooth_lines.png',
     tagline: 'Soften expression lines without losing natural movement.',
     description:
       'Our Smooth Lines treatment targets dynamic wrinkles caused by repeated facial expressions — crow\'s feet, frown lines, and forehead creases. Using precision-placed relaxant injections, we relax overactive muscles so lines soften naturally while full expression is preserved.',
@@ -19,7 +19,7 @@ const TREATMENTS = [
     num: '02',
     label: 'Face Sculpt',
     slug: 'face-sculpt',
-    image: '/images/treatments/face-sculpt.jpg',
+    image: '/assets/face_sculpt.png',
     tagline: 'Redefine structure, restore volume, and enhance contours.',
     description:
       'Face Sculpt uses premium dermal fillers to restore lost volume, define cheekbones, refine the jawline, and enhance facial proportions. Each treatment is tailored to your anatomy for a harmonious, naturally sculpted result.',
@@ -35,7 +35,7 @@ const TREATMENTS = [
     num: '03',
     label: 'Skin Glow',
     slug: 'skin-glow',
-    image: '/images/treatments/skin-glow.jpg',
+    image: '/assets/skin_glow.png',
     tagline: 'Deeply hydrate and illuminate from within.',
     description:
       'Skin Glow combines advanced skin-boosting injectables and hydration treatments to deeply nourish the dermis. The result is a luminous, plump complexion that radiates health and vitality — perfect before a big event or as a regular skin ritual.',
@@ -51,7 +51,7 @@ const TREATMENTS = [
     num: '04',
     label: 'Collagen Restore',
     slug: 'collagen-restore',
-    image: '/images/treatments/collagen-restore.jpg',
+    image: '/assets/collagen_restore.png',
     tagline: 'Stimulate your skin\'s own renewal from the inside out.',
     description:
       'Collagen Restore uses bio-stimulating treatments to trigger the skin\'s natural collagen production. Over weeks, skin becomes firmer, thicker, and more resilient — addressing laxity and fine lines with long-lasting, progressive improvement.',
@@ -67,7 +67,7 @@ const TREATMENTS = [
     num: '05',
     label: 'Clear Skin',
     slug: 'clear-skin',
-    image: '/images/treatments/clear-skin.jpg',
+    image: '/assets/clear_skin.png',
     tagline: 'Target blemishes, refine pores, and reveal clarity.',
     description:
       'Clear Skin is a targeted approach to acne-prone and congested skin. Combining medical-grade peels, skin-clearing treatments, and personalised protocols, we address active breakouts, reduce scarring, and regulate oil production for long-term clarity.',
@@ -83,7 +83,7 @@ const TREATMENTS = [
     num: '06',
     label: 'Neck Renewal',
     slug: 'neck-renewal',
-    image: '/images/treatments/neck-renewal.jpg',
+    image: '/assets/neck_renewal.png',
     tagline: 'Restore smoothness and lift to the neck and décolletage.',
     description:
       'The neck is often overlooked but is one of the first areas to show aging. Neck Renewal targets horizontal bands, loose skin, and crepey texture using a combination of relaxants, skin-boosters, and tightening treatments for a visibly smoother, more youthful neck.',
@@ -99,7 +99,7 @@ const TREATMENTS = [
     num: '07',
     label: 'Full Face Refresh',
     slug: 'full-face-refresh',
-    image: '/images/treatments/full-face-refresh.jpg',
+    image: '/assets/full_face_refresh.png',
     tagline: 'A complete facial rejuvenation tailored to you.',
     description:
       'Full Face Refresh is our comprehensive anti-aging protocol — combining the most effective elements of our treatments for a holistic renewal. From smoothing lines to restoring volume and improving skin quality, this is the ultimate facial transformation experience.',
@@ -115,7 +115,7 @@ const TREATMENTS = [
     num: '08',
     label: 'Stay Youthful',
     slug: 'stay-youthful',
-    image: '/images/treatments/stay-youthful.jpg',
+    image: '/assets/stay_youthful.png',
     tagline: 'A proactive programme to preserve your best skin.',
     description:
       'Stay Youthful is our preventative maintenance programme designed for those who want to age beautifully. Regular, subtle treatments keep skin at its best — preventing deep lines before they form and maintaining radiance year-round.',

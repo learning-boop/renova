@@ -34,7 +34,7 @@ function Header() {
           </button>
 
           <Link to="/" className="header__logo" onClick={close}>
-            Creative Touch<span> Renova</span>
+            <img src="/assets/renova_logo_withoutbg.png" alt="Creative Touch Renova" className="header__logo-img" />
           </Link>
 
           <Link to="/contact" className="header__book" onClick={close}>
@@ -52,6 +52,10 @@ function Header() {
       >
         {/* LEFT panel */}
         <div className="nav-overlay__left">
+
+          <div className="nav-overlay__logo">
+            <img src="/assets/renova_logo_withoutbg.png" alt="Creative Touch Renova" className="nav-overlay__logo-img" />
+          </div>
 
           <nav className="nav-overlay__primary">
             {TREATMENTS.map((t, i) => (

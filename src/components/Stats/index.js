@@ -9,7 +9,7 @@ function Stats() {
       <div className="si-left">
         <div className="si-left-img">
           <img
-            src="/images/treatments/collagen-restore.jpg"
+            src="/assets/collagen_restore.png"
             alt="Treatment"
             className="si-img"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -24,7 +24,7 @@ function Stats() {
       {/* ── Right half: full image cover ── */}
       <div className="si-right">
         <img
-          src="/images/treatments/face-sculpt.jpg"
+          src="/assets/face_sculpt.png"
           alt="Treatment"
           className="si-img"
           onError={(e) => { e.currentTarget.style.display = 'none'; }}

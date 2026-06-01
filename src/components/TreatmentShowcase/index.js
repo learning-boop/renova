@@ -11,49 +11,57 @@ const TREATMENTS = [
     id: 1, number: '01', title: 'Smooth Lines', slug: 'smooth-lines',
     description: 'Soften expression lines while keeping your natural movement and facial character.',
     bullets: ['Visible results within 3–5 days', 'No downtime required'],
-    image: '/images/treatments/smooth-lines.jpg',
+    image: '/assets/smooth_lines.png',
+    variant: 'v1',
   },
   {
     id: 2, number: '02', title: 'Face Sculpt', slug: 'face-sculpt',
     description: 'Define facial structure with a refined focus on cheekbones, jawline, and balanced contours.',
     bullets: ['Immediate, long-lasting volume', 'Tailored to your bone structure'],
-    image: '/images/treatments/face-sculpt.jpg',
+    image: '/assets/face_sculpt.png',
+    variant: 'v2',
   },
   {
     id: 3, number: '03', title: 'Skin Glow', slug: 'skin-glow',
     description: 'Restore luminosity, hydration, and a fresh healthy-looking complexion.',
     bullets: ['Deep hydration lasting weeks', 'Suitable for all skin types'],
-    image: '/images/treatments/skin-glow.jpg',
+    image: '/assets/skin_glow.png',
+    variant: 'v3',
   },
   {
     id: 4, number: '04', title: 'Collagen Restore', slug: 'collagen-restore',
     description: 'Support skin renewal and improve firmness, texture, and long-lasting radiance.',
     bullets: ['Stimulates natural collagen synthesis', 'Progressive improvement over weeks'],
-    image: '/images/treatments/collagen-restore.jpg',
+    image: '/assets/collagen_restore.png',
+    variant: 'v4',
   },
   {
     id: 5, number: '05', title: 'Clear Skin', slug: 'clear-skin',
     description: 'Calm visible congestion and create a smoother, clearer, more balanced complexion.',
     bullets: ['Reduces active breakouts', 'Minimises post-acne marks'],
-    image: '/images/treatments/clear-skin.jpg',
+    image: '/assets/clear_skin.png',
+    variant: 'v1',
   },
   {
     id: 6, number: '06', title: 'Neck Renewal', slug: 'neck-renewal',
     description: 'Refine the neck and décolletage area with a smoother, lifted, elegant appearance.',
     bullets: ['Smooths horizontal bands', 'Tightens without surgery'],
-    image: '/images/treatments/neck-renewal.jpg',
+    image: '/assets/neck_renewal.png',
+    variant: 'v2',
   },
   {
     id: 7, number: '07', title: 'Full Face Refresh', slug: 'full-face-refresh',
     description: 'A complete facial rejuvenation approach for balanced, natural-looking freshness.',
     bullets: ['Comprehensive anti-aging protocol', 'Cohesive, harmonious result'],
-    image: '/images/treatments/full-face-refresh.jpg',
+    image: '/assets/full_face_refresh.png',
+    variant: 'v3',
   },
   {
     id: 8, number: '08', title: 'Stay Youthful', slug: 'stay-youthful',
     description: 'Preventative aesthetic care designed to maintain freshness, confidence, and timeless beauty.',
     bullets: ['Prevents lines before they form', 'Personalised ongoing plan'],
-    image: '/images/treatments/stay-youthful.jpg',
+    image: '/assets/stay_youthful.png',
+    variant: 'v4',
   },
 ];
 
@@ -97,24 +105,16 @@ function ProgressDots({ activeIndex, onDotClick }) {
 function TreatmentImage({ treatment, scrollRef }) {
   return (
     <div className="ts-img-inner">
-      {/* Placeholder always present behind image */}
-      <div className="ts-img-placeholder">
-        <span className="ts-img-placeholder__num">{treatment.number}</span>
-        <span className="ts-img-placeholder__label">{treatment.title}</span>
-      </div>
-      {/* Real portrait image */}
       <motion.img
         src={treatment.image}
         alt={treatment.title}
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center center' }}
         initial={{ opacity: 0, scale: 1.06 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ root: scrollRef, amount: 0.5, once: true }}
         transition={{ duration: 1.4, ease: E }}
         onError={(e) => { e.currentTarget.style.display = 'none'; }}
       />
-      <div className="ts-img-blend" />
-      <div className="ts-img-vignette" />
     </div>
   );
 }
@@ -328,7 +328,7 @@ function TreatmentShowcase() {
         {/* Row 2: horizontal scroll — one panel per treatment */}
         <div ref={desktopScrollRef} className="ts-scroll-track">
           {TREATMENTS.map((t) => (
-            <div key={t.id} className="ts-panel">
+            <div key={t.id} className={`ts-panel ts-panel--${t.variant}`}>
 
               {/* Left — content */}
               <div className="ts-panel-content">

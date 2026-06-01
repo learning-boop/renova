@@ -5,48 +5,90 @@
   position: relative;
 }
 
-/* Sticky container — stays in view while you scroll through the extra height */
+/* Sticky container holds all three layers */
 .scroll-text__sticky {
   position: sticky;
   top: 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
-.scroll-text__inner {
-  max-width: 1100px;
-  padding: 0 40px;
-  text-align: center;
+/* ── Layer 1: giant background text ── */
+.scroll-text__bg {
+  position: absolute;
+  inset: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 16px 28px;
+  z-index: 1;
+  pointer-events: none;
+  line-height: 0.88;
+  gap: 0;
 }
 
 .scroll-text__word {
-  display: inline-block;
+  display: block;
   font-family: 'Cormorant', Georgia, serif;
-  font-size: clamp(80px, 14vw, 200px);
+  font-size: clamp(110px, 18vw, 260px);
   font-weight: 300;
   font-style: italic;
   color: var(--color-dark);
-  line-height: 1;
-  opacity: 0;
-  transform: translateY(40px);
+  line-height: 0.88;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  opacity: 0.15;
   will-change: opacity, transform;
 }
 
+/* ── Layer 2: doctor image, sits on top of text ── */
+.scroll-text__img-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroll-text__doctor-img {
+  height: 97vh;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* ── Layer 3: small description — bottom-left ── */
 .scroll-text__para {
   position: absolute;
   bottom: 52px;
   left: 52px;
-  max-width: 240px;
-  font-size: 12px;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
+  max-width: 200px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.9;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: var(--color-primary);
-  opacity: 0.6;
+  opacity: 0.55;
+  z-index: 3;
+}
+
+/* ── Layer 3: label — top-right ── */
+.scroll-text__label {
+  position: absolute;
+  top: 44px;
+  right: 52px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  opacity: 0.5;
+  text-align: right;
+  line-height: 1.8;
+  z-index: 3;
 }
