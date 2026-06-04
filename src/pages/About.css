@@ -1,0 +1,730 @@
+/* ─── HERO ──────────────────────────────────────────────── */
+.ab-hero {
+  position: relative;
+  min-height: 185vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* will-change hints for GPU-composited parallax layers */
+.ab-hero__photo,
+.ab-quote__img,
+.ab-stat-hero__photo,
+.ab-stats__img--parallax,
+.ab-experience__photo,
+.ab-philosophy__img-main,
+.ab-philosophy__img-inset,
+.ab-why__split-img,
+.ab-why__split-photo,
+.ab-cta__img {
+  will-change: transform;
+}
+
+.ab-hero__name-bg {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(48px, 12vw, 150px);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;  
+  color: var(--color-gold);
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.ab-hero__role {
+  position: absolute;
+  top: 50%;
+  left: 48px;
+  transform: translateY(-50%);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  opacity: 0.5;
+  line-height: 1.8;
+  z-index: 2;
+}
+
+.ab-hero__photo-wrap {
+  position: relative;
+  z-index: 2;
+  width: 52%;
+  max-width: 660px;
+  margin: 80px auto 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ab-hero__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.ab-hero__scroll {
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(200, 169, 106, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-size: 16px;
+  z-index: 3;
+}
+
+/* ─── QUOTE ─────────────────────────────────────────────── */
+.ab-quote {
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  width: 97vw;
+  padding-bottom: 80px;
+}
+
+.ab-quote__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ab-quote__left {
+  padding-top: 40px;
+}
+
+.ab-quote__marks {
+  font-family: Georgia, serif;
+  font-size: 80px;
+  line-height: 1;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.ab-quote__text {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(14px, 1vw, 20px);
+  font-weight: 700;
+  line-height: 1.85;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.ab-hero-wrap{
+  position: relative;
+}
+
+
+.ab-quote__img {
+  width: 20vw;
+  height: 40vh;
+}
+
+/* ─── FEATURED STAT ─────────────────────────────────────── */
+.ab-stat-hero {
+  background: white;
+  position: relative;
+  padding: 80px 0 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ab-stat-hero__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  line-height: 1.7;
+  display: block;
+}
+
+.ab-stat-hero__number {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(80px, 16vw, 220px);
+  font-weight: 300;
+  line-height: 0.85;
+  color: var(--color-gold);
+  opacity: 0.65;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 16px;
+}
+
+.ab-stat-hero__number sup {
+  font-size: 0.35em;
+  vertical-align: super;
+}
+
+.ab-stat-hero__photo-wrap {
+  position: relative;
+  z-index: 2;
+  margin: -120px auto 0;
+  width: 48%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.ab-stat-hero__photo {
+  width: 100%;
+  display: block;
+  transform-origin: center center;
+}
+
+/* ─── STATS GRID ─────────────────────────────────────────── */
+.ab-stats {
+  background: white;
+  padding: 60px 0;
+}
+
+.ab-stats__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.ab-stats__img-wrap {
+  height: 580px;
+  overflow: hidden;
+}
+
+.ab-stats__img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  object-position: center;
+  margin-top: -20%;
+}
+
+.ab-stats__grid {
+  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 48px;
+  column-gap: 48px;
+}
+
+.ab-stats__item {
+  border-bottom: 1px solid rgba(18, 60, 63, 0.1);
+  padding-bottom: 20px;
+}
+
+.ab-stats__num {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 300;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.ab-stats__desc {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  line-height: 1.7;
+  opacity: 0.65;
+}
+
+/* ─── EXPERIENCE ─────────────────────────────────────────── */
+.ab-experience {
+  background: var(--color-cream);
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.ab-experience__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 640px;
+}
+
+.ab-experience__vert-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 48px);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  white-space: nowrap;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.ab-experience__photo-wrap {
+  overflow: hidden;
+  height: 560px;
+}
+
+.ab-experience__photo {
+  width: 100%;
+  height: 145%;
+  object-fit: cover;
+  object-position: top center;
+  margin-top: -22%;
+}
+
+.ab-experience__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.ab-experience__card {
+  border: 1px solid rgba(200, 169, 106, 0.2);
+  padding: 28px 22px;
+  min-height: 150px;
+}
+
+.ab-experience__card-text {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  line-height: 1.95;
+}
+
+/* ─── PHILOSOPHY ─────────────────────────────────────────── */
+.ab-philosophy {
+  background: white;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.ab-philosophy__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.ab-philosophy__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.ab-philosophy__title {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(52px, 8vw, 120px);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+}
+
+.ab-philosophy__subtitle-block {
+  padding-top: 24px;
+}
+
+.ab-philosophy__subtitle-label {
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.ab-philosophy__subtitle {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.ab-philosophy__content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 100px;
+}
+
+.ab-philosophy__images {
+  position: relative;
+}
+
+.ab-philosophy__img-main-wrap {
+  overflow: hidden;
+  width: 49vw;
+  height: 100vh;
+}
+
+.ab-philosophy__img-main {
+  width: 100%;
+  height: 145%;
+  object-fit: cover;
+  transform-origin: center center;
+  margin-top: -22%;
+}
+
+.ab-philosophy__img-inset {
+  position: absolute;
+  top: -97px;
+  right: -63px;
+  width: 17vw;
+  height: 220px;
+}
+
+.ab-philosophy__deco-bar {
+  position: absolute;
+  top: -24px;
+  right: -50px;
+  width: 60px;
+  height: 60px;
+  background: var(--color-gold);
+  opacity: 0.25;
+}
+
+.ab-philosophy__quote-block {
+  padding-top: 0;
+}
+
+.ab-philosophy__quote-marks {
+  font-family: Georgia, serif;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--color-gold);
+  opacity: 0.4;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.ab-philosophy__quote-text {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  line-height: 2;
+  margin-bottom: 48px;
+  opacity: 0.8;
+}
+
+.ab-philosophy__principles {
+  display: flex;
+  flex-direction: column;
+}
+
+.ab-philosophy__principle {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(18, 60, 63, 0.08);
+}
+
+.ab-philosophy__principle:first-child {
+  border-top: 1px solid rgba(18, 60, 63, 0.08);
+}
+
+.ab-philosophy__principle-num {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ab-philosophy__principle-title {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+}
+
+.ab-philosophy__principle-text {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--color-primary);
+  opacity: 0.75;
+}
+
+/* ─── WHY CHOOSE ─────────────────────────────────────────── */
+.ab-why {
+  background: var(--color-dark);
+  overflow: hidden;
+}
+
+.ab-why__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+
+.ab-why__split-left {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+}
+
+.ab-why__split-quote {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  line-height: 2;
+  opacity: 0.6;
+}
+
+.ab-why__split-img-wrap {
+  width: 220px;
+  height: 290px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ab-why__split-img {
+  width: 100%;
+  height: 145%;
+  object-fit: cover;
+  margin-top: -22%;
+}
+
+.ab-why__split-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.ab-why__split-photo {
+  width: 100%;
+  height: 145%;
+  object-fit: cover;
+  display: block;
+  margin-top: -22%;
+}
+
+.ab-why__accordion-section {
+  padding: 80px 0;
+}
+
+.ab-why__accordion-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.ab-why__accordion-title {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  position: relative;
+  top: -54vh;
+  line-height: 1.05;
+  letter-spacing: 0.1em;
+}
+
+.ab-why__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.ab-why__item {
+  border-bottom: 1px solid rgba(200, 169, 106, 0.18);
+}
+
+.ab-why__item-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  text-align: left;
+  gap: 16px;
+  transition: color 0.2s;
+}
+
+.ab-why__item-btn:hover {
+  color: var(--color-gold);
+}
+
+.ab-why__item-icon {
+  font-size: 18px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+
+.ab-why__item-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  max-height: 0;
+}
+
+.ab-why__item-content--open {
+  max-height: 200px;
+}
+
+.ab-why__item-text {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--color-cream);
+  opacity: 0.55;
+  padding-bottom: 18px;
+}
+
+/* ─── BOOK A VISIT CTA ───────────────────────────────────── */
+.ab-cta {
+  background: var(--color-dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  border-top: 1px solid rgba(200, 169, 106, 0.08);
+}
+
+.ab-cta__img-wrap {
+  overflow: hidden;
+  max-height: 600px;
+}
+
+.ab-cta__img {
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transform-origin: center center;
+  margin-top: -20%;
+}
+
+.ab-cta__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px;
+  gap: 32px;
+}
+
+.ab-cta__circle {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(200, 169, 106, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--color-gold);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+.ab-cta__title {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(48px, 7.5vw, 110px);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  opacity: 0.5;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .ab-stats__grid { padding: 40px; }
+  .ab-experience__inner { gap: 40px; }
+  .ab-philosophy__inner { padding: 0 32px; }
+  .ab-why__accordion-inner { padding: 0 32px; }
+}
+
+@media (max-width: 1024px) {
+  .ab-experience__inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 32px;
+  }
+  .ab-experience__vert-text { display: none; }
+  .ab-why__accordion-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .ab-philosophy__header,
+  .ab-philosophy__content {
+    gap: 48px;
+  }
+  .ab-quote__inner { padding: 0 32px; }
+}
+
+@media (max-width: 768px) {
+  .ab-hero__role { display: none; }
+  .ab-hero__photo-wrap { width: 80%; margin-top: 100px; }
+  .ab-hero__scroll { right: 24px; bottom: 24px; }
+
+  .ab-quote__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px;
+  }
+  .ab-quote__img { height: 280px; }
+
+  .ab-stat-hero__photo-wrap { width: 75%; margin-top: -80px; }
+
+  .ab-stats__inner { grid-template-columns: 1fr; }
+  .ab-stats__img-wrap { height: 260px; }
+  .ab-stats__grid { padding: 40px 24px; grid-template-columns: 1fr 1fr; }
+
+  .ab-experience__inner { grid-template-columns: 1fr; padding: 0 24px; }
+  .ab-experience__photo-wrap { height: 360px; }
+  .ab-experience__cards { grid-template-columns: 1fr; }
+
+  .ab-philosophy__inner { padding: 0 24px; }
+  .ab-philosophy__header,
+  .ab-philosophy__content { grid-template-columns: 1fr; gap: 40px; }
+  .ab-philosophy__img-inset,
+  .ab-philosophy__deco-bar { display: none; }
+
+  .ab-why__split { grid-template-columns: 1fr; }
+  .ab-why__split-right { min-height: 380px; }
+  .ab-why__split-left { padding: 60px 24px; }
+  .ab-why__accordion-inner { padding: 0 24px; grid-template-columns: 1fr; }
+
+  .ab-cta { grid-template-columns: 1fr; }
+  .ab-cta__img-wrap { min-height: 360px; max-height: 360px; }
+  .ab-cta__right { padding: 60px 24px; }
+}

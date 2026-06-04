@@ -1,96 +1,75 @@
+import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import TREATMENTS from '../data/treatments';
-import PageHero from '../components/PageHero';
+import PinnedShowcase from '../components/PinnedShowcase';
 import CtaSection from '../components/CtaSection';
 import './pages.css';
+import './TreatmentDetail.css';
 
 function TreatmentDetail() {
   const { slug } = useParams();
   const treatment = TREATMENTS.find((t) => t.slug === slug);
+  const [openFaq, setOpenFaq] = useState(null);
 
   if (!treatment) return <Navigate to="/services" replace />;
 
-  const currentIndex = TREATMENTS.indexOf(treatment);
-  const prev = TREATMENTS[currentIndex - 1] || null;
-  const next = TREATMENTS[currentIndex + 1] || null;
+  const isLight = treatment.slug === 'smooth-lines';
 
   return (
     <>
-      <PageHero
-        label={`Treatment ${treatment.num}`}
-        title={treatment.label}
-        subtitle={treatment.tagline}
-      />
+      {/* ── CINEMATIC HERO ───────────────────────────────── */}
+      <section className={`td-hero${isLight ? ' td-hero--light' : ''}`}>
+        {/* background image */}
+        <div
+          className="td-hero__bg"
+          style={{ backgroundImage: `url(${treatment.image})` }}
+        />
+        {/* overlay */}
+        <div className="td-hero__overlay" />
 
-      <section className="page-section">
-        <div className="container">
-          <div className="page-two-col">
-            <div className="page-two-col__text">
-              <p className="section-label">About This Treatment</p>
-              <h2 className="section-title" style={{ marginBottom: 32 }}>What It Does</h2>
-              <p className="page-body-text">{treatment.description}</p>
-              <p className="page-body-text" style={{ marginTop: 24 }}>{treatment.ideal}</p>
-            </div>
-            <div className="page-two-col__image">
-              <div className="page-image-placeholder page-image-placeholder--tall">Treatment Image</div>
-            </div>
-          </div>
+        {/* large treatment name */}
+        <h1 className="td-hero__title">{treatment.label}</h1>
+
+        {/* centred tagline */}
+        <span className="td-hero__tagline">{treatment.tagline}</span>
+
+        {/* bottom-right description */}
+        <p className="td-hero__desc">{treatment.description}</p>
+
+        {/* bottom-left scroll indicator */}
+        <div className="td-hero__scroll">
+          <span className="td-hero__scroll-arrow">↓</span>
         </div>
       </section>
 
-      <section className="page-section page-section--tinted">
-        <div className="container">
-          <p className="section-label">What to Expect</p>
-          <h2 className="section-title" style={{ marginBottom: 48 }}>Key Benefits</h2>
-          <div className="treatment-benefits">
-            {treatment.benefits.map((b, i) => (
-              <div className="treatment-benefit" key={i}>
-                <span className="treatment-benefit__icon">✦</span>
-                <span className="treatment-benefit__text">{b}</span>
+      {/* ── EXPLORE ALL TREATMENTS (pinned showcase) ─────── */}
+      <PinnedShowcase treatments={TREATMENTS} />
+
+{/* Services section */}
+      <section>
+        <div className="td-service-container">
+          <h1 className='td-service'>Services</h1>
+          <div className="td-service-links">
+            {treatment.faqs.map((faq, i) => (
+              <div className="td-faq-item" key={i}>
+                <button
+                  className="td-faq-btn"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                >
+                  <span className="td-faq-num">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="td-faq-q">{faq.q}</span>
+                  <span className="td-faq-toggle">
+                    {openFaq === i ? '−' : '+'}
+                  </span>
+                </button>
+                <div className={`td-faq-answer${openFaq === i ? ' td-faq-answer--open' : ''}`}>
+                  <p className="td-faq-answer-text">{faq.a}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      <section className="page-section">
-        <div className="container page-centered">
-          <p className="section-label">Ready to Transform?</p>
-          <h2 className="section-title">Book Your {treatment.label} Treatment</h2>
-          <p className="page-body-text" style={{ maxWidth: 480, margin: '24px auto 40px' }}>
-            Schedule a consultation with our team to discuss your goals and create a personalised plan.
-          </p>
-          <Link to="/contact" className="btn-primary">Book an Appointment</Link>
-        </div>
-      </section>
-
-      <section className="page-section page-section--tinted">
-        <div className="container">
-          <p className="section-label">Explore More</p>
-          <h2 className="section-title" style={{ marginBottom: 48 }}>Other Treatments</h2>
-          <div className="treatment-nav">
-            {prev && (
-              <Link to={`/treatments/${prev.slug}`} className="treatment-nav__card treatment-nav__card--prev">
-                <span className="treatment-nav__direction">&larr; Previous</span>
-                <span className="treatment-nav__num">{prev.num}</span>
-                <span className="treatment-nav__name">{prev.label}</span>
-              </Link>
-            )}
-            {next && (
-              <Link to={`/treatments/${next.slug}`} className="treatment-nav__card treatment-nav__card--next">
-                <span className="treatment-nav__direction">Next &rarr;</span>
-                <span className="treatment-nav__num">{next.num}</span>
-                <span className="treatment-nav__name">{next.label}</span>
-              </Link>
-            )}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <Link to="/services" className="btn-outline">View All Treatments</Link>
-          </div>
-        </div>
-      </section>
-
-      <CtaSection />
     </>
   );
 }
