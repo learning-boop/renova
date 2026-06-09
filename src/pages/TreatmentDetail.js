@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import TREATMENTS from '../data/treatments';
 import PinnedShowcase from '../components/PinnedShowcase';
 import CtaSection from '../components/CtaSection';
+import QuickContact from '../components/QuickContact';
 import './pages.css';
 import './TreatmentDetail.css';
 
@@ -10,8 +11,20 @@ function TreatmentDetail() {
   const { slug } = useParams();
   const treatment = TREATMENTS.find((t) => t.slug === slug);
   const [openFaq, setOpenFaq] = useState(null);
+  const [reviewIndex, setReviewIndex] = useState(0);
+  const [slideDir, setSlideDir] = useState('right');
 
   if (!treatment) return <Navigate to="/services" replace />;
+
+  const reviews = treatment.reviews || [];
+  const prevReview = () => {
+    setSlideDir('left');
+    setReviewIndex(i => (i - 1 + reviews.length) % reviews.length);
+  };
+  const nextReview = () => {
+    setSlideDir('right');
+    setReviewIndex(i => (i + 1) % reviews.length);
+  };
 
   const isLight = treatment.slug === 'smooth-lines';
 
@@ -43,9 +56,9 @@ function TreatmentDetail() {
       </section>
 
       {/* ── EXPLORE ALL TREATMENTS (pinned showcase) ─────── */}
-      <PinnedShowcase treatments={TREATMENTS} />
+      <PinnedShowcase items={treatment.subTreatments} treatmentSlug={treatment.slug} fallbackImage={treatment.image} />
 
-{/* Services section */}
+      {/* Services section */}
       <section>
         <div className="td-service-container">
           <h1 className='td-service'>Services</h1>
@@ -56,7 +69,7 @@ function TreatmentDetail() {
                   className="td-faq-btn"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-                  <span className="td-faq-num">{String(i + 1).padStart(2, '0')}</span>
+                  {/* <span className="td-faq-num">{String(i + 1).padStart(2, '0')}</span> */}
                   <span className="td-faq-q">{faq.q}</span>
                   <span className="td-faq-toggle">
                     {openFaq === i ? '−' : '+'}
@@ -70,6 +83,95 @@ function TreatmentDetail() {
           </div>
         </div>
       </section>
+      {/* ── EDITORIAL: WHAT SHOULD PERFECT [TREATMENT] LOOK LIKE? ── */}
+      <section className="td-editorial">
+        {/* "WHAT SHOULD" — behind image */}
+        <h2 className="td-editorial__hl td-editorial__hl--1">WHAT SHOULD</h2>
+
+        {/* "PERFECT [treatment]" — behind image */}
+        <h2 className="td-editorial__hl td-editorial__hl--2">
+          PERFECT {treatment.label}
+        </h2>
+
+        {/* Centre image placeholder */}
+        <div className="td-editorial__img" style={{ backgroundImage: `url(${treatment.image_second})` }} />
+
+        {/* "LOOK LIKE?" — in front of image */}
+        <h2 className="td-editorial__hl td-editorial__hl--3">LOOK LIKE?</h2>
+
+        {/* Read more CTA */}
+        <div className="td-editorial__cta">
+          <span className="td-editorial__cta-text">READ MORE</span>
+          <div className="td-editorial__cta-circle" />
+        </div>
+
+        {/* Quote block — lower left */}
+        <div className="td-editorial__quote">
+          <span className="td-editorial__quote-mark">"</span>
+          <p className="td-editorial__quote-text">{treatment.description}</p>
+        </div>
+      </section>
+
+      {/* ── BEFORE / AFTER ─────────────────────────────────────── */}
+      {treatment.reviews && treatment.reviews.length > 0 && (
+      <section className="td-ba">
+        <h2 className="td-ba__heading">BEFORE/AFTER</h2>
+
+        {/* Main image — single before/after photo, slides on nav */}
+        <div className="td-ba__main-pair">
+          <div
+            key={reviewIndex}
+            className={`td-ba__img-lg td-ba__img-lg--slide-${slideDir}`}
+            style={{ backgroundImage: `url(${reviews[reviewIndex]})` }}
+          />
+        </div>
+
+        {/* Secondary — preview of next image */}
+        {reviews.length > 1 && (
+          <div className="td-ba__secondary-pair">
+            <div
+              className="td-ba__img-sm"
+              style={{ backgroundImage: `url(${reviews[(reviewIndex + 1) % reviews.length]})` }}
+            />
+          </div>
+        )}
+
+        {/* Navigation arrows */}
+        <div className="td-ba__nav">
+          <button className="td-ba__nav-btn" onClick={prevReview} aria-label="Previous">←</button>
+          <button className="td-ba__nav-btn" onClick={nextReview} aria-label="Next">→</button>
+        </div>
+
+        {/* More photos circle CTA */}
+        <div className="td-ba__more">
+          <span className="td-ba__more-text">MORE PHOTOS</span>
+        </div>
+      </section>
+      )}
+
+      {/* ── PRICES ─────────────────────────────────────────────── */}
+      <section className="td-prices">
+        <h2 className="td-prices__heading">PRICES</h2>
+        <div className="td-prices__list">
+          {treatment.prices.map((item, i) => (
+            <div className="td-prices__row" key={i}>
+              <span className="td-prices__name">{item.name}</span>
+              <div className="td-prices__right">
+                {item.originalPrice && (
+                  <span className="td-prices__original">{item.originalPrice}</span>
+                )}
+                {item.discount && (
+                  <span className="td-prices__badge">{item.discount}</span>
+                )}
+                <span className="td-prices__amount">{item.price}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── DOCTOR / QUICK CONTACT ─────────────────────────────── */}
+      <QuickContact />
     </>
   );
 }

@@ -1,7 +1,7 @@
 export const PRIMARY_LINKS = [
   { label: 'Home',           href: '/' },
   { label: 'About',          href: '/about' },
-  { label: 'Services',       href: '/services' },
+  { label: 'Training',       href: '/training' },
   { label: 'Before & After', href: '/gallery' },
 ];
 

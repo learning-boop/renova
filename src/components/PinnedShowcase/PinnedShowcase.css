@@ -11,7 +11,7 @@
   height: 100vh;
   background: #faf8f4;
   display: grid;
-  grid-template-columns: 72px 1fr 1.1fr;
+  grid-template-columns: 1fr 1.1fr;
   overflow: hidden;
 }
 
@@ -167,6 +167,7 @@
   margin-bottom: 40px;
 }
 
+
 /* CTA link */
 .ps-cta {
   display: inline-flex;
@@ -244,7 +245,7 @@
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .ps-sticky {
-    grid-template-columns: 60px 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .ps-left {
     padding: 60px 40px 60px 36px;
