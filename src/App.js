@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { TreatmentsProvider } from './context/TreatmentsContext';
 import './App.css';
 import Header       from './components/Header';
 import Footer       from './components/Footer';
@@ -7,6 +8,7 @@ import Home         from './pages/Home';
 import About        from './pages/About';
 import Services     from './pages/Services';
 import TreatmentDetail from './pages/TreatmentDetail';
+import MainTreatmentDetail from './pages/MainTreatmentDetail';
 import Gallery      from './pages/Gallery';
 import SkinConcerns from './pages/SkinConcerns';
 import Testimonials from './pages/Testimonials';
@@ -15,6 +17,7 @@ import Contact      from './pages/Contact';
 
 function App() {
   return (
+    <TreatmentsProvider>
     <BrowserRouter>
       <ScrollToTop />
       <Header />
@@ -22,7 +25,8 @@ function App() {
         <Route path="/"                     element={<Home />} />
         <Route path="/about"                element={<About />} />
         <Route path="/training"             element={<Services />} />
-        <Route path="/treatments/:slug"     element={<TreatmentDetail />} />
+        <Route path="/treatments/:slug"      element={<TreatmentDetail />} />
+        <Route path="/main-treatments/:slug" element={<MainTreatmentDetail />} />
         <Route path="/gallery"              element={<Gallery />} />
         <Route path="/skin-concerns"        element={<SkinConcerns />} />
         <Route path="/testimonials"         element={<Testimonials />} />
@@ -32,6 +36,7 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </TreatmentsProvider>
   );
 }
 

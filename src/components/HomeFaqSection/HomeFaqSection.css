@@ -91,8 +91,8 @@
 
 .hfaq-card-a {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: rgba(248, 244, 239, 0.5);
+  font-size: 0.82rem;
+  color: rgba(248, 244, 239, 0.88);
   line-height: 1.85;
   margin-top: 24px;
   overflow: hidden;

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import TREATMENTS from '../data/treatments';
+import { useTreatments } from '../context/TreatmentsContext';
 import PageHero from '../components/PageHero';
 import CtaSection from '../components/CtaSection';
 import './pages.css';
@@ -18,6 +18,7 @@ const items = [
 ];
 
 function Gallery() {
+  const { treatments } = useTreatments();
   return (
     <>
       <PageHero
@@ -49,7 +50,7 @@ function Gallery() {
                 </div>
                 <div className="gallery-item__info">
                   <span className="gallery-item__label">{item.label}</span>
-                  <Link to={`/treatments/${TREATMENTS.find(t => t.label === item.treatment)?.slug}`} className="gallery-item__treatment">
+                  <Link to={`/treatments/${treatments.find(t => t.label === item.treatment)?.slug}`} className="gallery-item__treatment">
                     {item.treatment} &rarr;
                   </Link>
                 </div>

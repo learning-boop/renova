@@ -69,9 +69,9 @@
 
 .ba-sub {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.06em;
-  color: rgba(12, 15, 13, 0.45);
+  color: rgba(12, 15, 13, 0.78);
   margin: 0;
 }
 
@@ -165,10 +165,10 @@
 
 .ba-cta {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(12, 15, 13, 0.55);
+  color: rgba(12, 15, 13, 0.82);
   text-decoration: none;
   transition: color 0.4s ease;
 }

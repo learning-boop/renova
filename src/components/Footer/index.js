@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import TREATMENTS from '../../data/treatments';
+import { useTreatments } from '../../context/TreatmentsContext';
 import './Footer.css';
 
 function Footer() {
+  const { treatments } = useTreatments();
   return (
     <footer className="ft-root">
       <div className="ft-inner">
@@ -25,7 +26,7 @@ function Footer() {
           <div className="ft-col">
             <h4 className="ft-col-heading">Treatments</h4>
             <ul className="ft-col-links">
-              {TREATMENTS.slice(0, 4).map((t) => (
+              {treatments.slice(0, 4).map((t) => (
                 <li key={t.slug}>
                   <Link to={`/treatments/${t.slug}`}>{t.label}</Link>
                 </li>

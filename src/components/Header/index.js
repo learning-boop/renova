@@ -1,127 +1,158 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import TREATMENTS from '../../data/treatments';
-import { PRIMARY_LINKS } from '../../data/links';
+import { useTreatments } from '../../context/TreatmentsContext';
 import './Header.css';
 
+const MAIN_TREATMENTS = [
+  { num: '01', label: 'Anti-Wrinkle Treatments', href: '/main-treatments/anti-wrinkle-treatments' },
+  { num: '02', label: 'Dermal Fillers',           href: '/main-treatments/dermal-fillers' },
+  { num: '03', label: 'Skin Boosters',            href: '/main-treatments/skin-boosters' },
+  { num: '04', label: 'Regenerative Treatments',  href: '/main-treatments/regenerative-treatments' },
+  { num: '05', label: 'Biostimulators',           href: '/main-treatments/biostimulators' },
+  { num: '06', label: 'Microneedling',            href: '/main-treatments/microneedling' },
+  { num: '07', label: 'RF Microneedling',         href: '/main-treatments/rf-microneedling' },
+  { num: '08', label: 'HIFU',                     href: '/main-treatments/hifu' },
+]
+
+const BOTTOM_NAV = [
+  { label: 'Home',           href: '/' },
+  { label: 'About',          href: '/about' },
+  { label: 'Training',       href: '/training' },
+  { label: 'Before & After', href: '/gallery' },
+  { label: 'Contact',        href: '/contact' },
+]
+
 function Header() {
-  const [open, setOpen] = useState(false);
-  const [hovered, setHovered] = useState(null);
-  const navigate = useNavigate();
+  const [open, setOpen]           = useState(false);
+  const [activeMain, setActiveMain] = useState(null);
+  const navigate                  = useNavigate();
+  const { treatments }            = useTreatments();
 
-  const close = () => { setOpen(false); setHovered(null); };
+  const close = () => { setOpen(false); setActiveMain(null); };
+  const go    = (href) => { close(); navigate(href); };
 
-  const handleNavClick = (href) => {
-    close();
-    navigate(href);
-  };
+  // Pick image for right panel: hovered main treatment → nearest package image, else default
+  const panelImage = (activeMain !== null && treatments[activeMain]?.image)
+    ? treatments[activeMain].image
+    : '/assets/home_model.png';
 
   return (
     <>
-      {/* ── Fixed top bar ── */}
+      {/* ── Fixed top bar ─────────────────────────────────────── */}
       <header className={`header ${open ? 'header--hidden' : ''}`}>
         <div className="header__accent-line" />
         <div className="header__bar">
-          <button
-            className="header__menu-toggle"
-            onClick={() => setOpen(true)}
-            aria-label="Open menu"
-          >
+          <button className="header__menu-toggle" onClick={() => setOpen(true)} aria-label="Open menu">
             <span className="header__menu-label">Menu</span>
             <svg width="10" height="7" viewBox="0 0 10 7" fill="none">
               <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
             </svg>
           </button>
-
           <Link to="/" className="header__logo" onClick={close}>
             <img src="/assets/renova_logo_withoutbg.png" alt="Creative Touch Renova" className="header__logo-img" />
           </Link>
-
           <Link to="/contact" className="header__book" onClick={close}>
             Book an Appointment
           </Link>
         </div>
       </header>
 
-      {/* ── Full-screen overlay ── */}
+      {/* ── Full-screen overlay ───────────────────────────────── */}
       <div
         className={`nav-overlay ${open ? 'nav-overlay--open' : ''}`}
-        aria-modal="true"
         role="dialog"
+        aria-modal="true"
         aria-hidden={!open}
       >
-        {/* LEFT panel */}
+
+        {/* ── LEFT: Main Treatments ── */}
         <div className="nav-overlay__left">
 
           <div className="nav-overlay__logo">
             <img src="/assets/renova_logo_withoutbg.png" alt="Creative Touch Renova" className="nav-overlay__logo-img" />
           </div>
 
-          <nav className="nav-overlay__primary">
-            {TREATMENTS.map((t, i) => (
-              <button
-                key={t.num}
-                className={`nav-overlay__primary-link${hovered === t.num ? ' nav-overlay__primary-link--active' : ''}`}
-                style={{ animationDelay: open ? `${i * 0.07}s` : '0s' }}
-                onMouseEnter={() => setHovered(t.num)}
-                onMouseLeave={() => setHovered(null)}
-                onClick={() => handleNavClick(`/treatments/${t.slug}`)}
-              >
-                <span className="nav-overlay__primary-num">{t.num}</span>
-                {t.label}
-              </button>
-            ))}
-          </nav>
+          <div className="nav-overlay__section">
+            <p className="nav-overlay__section-label">Main Treatments</p>
+            <nav className="nav-overlay__main-list">
+              {MAIN_TREATMENTS.map((t, i) => (
+                <button
+                  key={t.num}
+                  className={`nav-overlay__main-item${activeMain === i ? ' nav-overlay__main-item--active' : ''}`}
+                  style={{ animationDelay: open ? `${i * 0.055}s` : '0s' }}
+                  onMouseEnter={() => setActiveMain(i)}
+                  onMouseLeave={() => setActiveMain(null)}
+                  onClick={() => go(t.href)}
+                >
+                  <span className="nav-overlay__main-num">{t.num}</span>
+                  <span className="nav-overlay__main-label">{t.label}</span>
+                </button>
+              ))}
+            </nav>
+          </div>
 
-          <nav className="nav-overlay__secondary-nav">
-            {PRIMARY_LINKS.map((link, i) => (
-              <button
-                key={link.label}
-                className="nav-overlay__secondary-link"
-                style={{ animationDelay: open ? `${0.38 + i * 0.05}s` : '0s' }}
-                onClick={() => handleNavClick(link.href)}
-              >
+          <nav className="nav-overlay__bottom-nav">
+            {BOTTOM_NAV.map((link) => (
+              <button key={link.label} className="nav-overlay__bottom-link" onClick={() => go(link.href)}>
                 {link.label}
               </button>
             ))}
           </nav>
 
-          <div className="nav-overlay__footer">
-            <p className="nav-overlay__tagline">Refined to Perfection</p>
-            <div className="nav-overlay__socials">
-              <button onClick={close}>Instagram</button>
-              <span className="nav-overlay__dot" />
-              <button onClick={() => handleNavClick('/faq')}>Privacy Policy</button>
-              <span className="nav-overlay__dot" />
-              <button onClick={() => handleNavClick('/faq')}>Terms</button>
-              <span className="nav-overlay__dot" />
-              <button onClick={() => handleNavClick('/contact')}>Location</button>
-            </div>
+        </div>
+
+        {/* ── MIDDLE: Signature Programmes ── */}
+        <div className="nav-overlay__middle">
+
+          <div className="nav-overlay__section nav-overlay__section--packages">
+            <p className="nav-overlay__section-label">Signature Programmes</p>
+            <nav className="nav-overlay__pkg-list">
+              {treatments.map((t, i) => (
+                <button
+                  key={t.slug}
+                  className="nav-overlay__pkg-item"
+                  style={{ animationDelay: open ? `${0.08 + i * 0.055}s` : '0s' }}
+                  onClick={() => go(`/treatments/${t.slug}`)}
+                >
+                  <span className="nav-overlay__pkg-num">{t.num}</span>
+                  <span className="nav-overlay__pkg-content">
+                    <span className="nav-overlay__pkg-title">{t.label}</span>
+                    <span className="nav-overlay__pkg-sub">{t.tagline}</span>
+                  </span>
+                </button>
+              ))}
+            </nav>
           </div>
+
+          <button className="nav-overlay__book-btn" onClick={() => go('/contact')}>
+            Book an Appointment <span className="nav-overlay__book-arrow">→</span>
+          </button>
 
         </div>
 
-        {/* RIGHT panel */}
-        <div className="nav-overlay__right">
-          <button
-            className="nav-overlay__close"
-            onClick={close}
-            aria-label="Close menu"
-          >
-            &#10005;
+        {/* ── RIGHT: Image panel ── */}
+        <div className="nav-overlay__image-panel">
+          <button className="nav-overlay__close" onClick={close} aria-label="Close menu">
+            ✕
           </button>
+          <img
+            src={panelImage}
+            alt="Treatment"
+            className="nav-overlay__panel-img"
+          />
+        </div>
 
-          {TREATMENTS.map((t) => (
-            <div
-              key={t.num}
-              className={`nav-overlay__treatment-img${hovered === t.num ? ' nav-overlay__treatment-img--visible' : ''}`}
-            >
-              <img src={t.image} alt={t.label} className="nav-overlay__treatment-photo" />
-            </div>
-          ))}
-
-          <div className="nav-overlay__book-cta" onClick={() => handleNavClick('/contact')}>
-            Book an <br/> Appointment
+        {/* ── FOOTER BAR ── */}
+        <div className="nav-overlay__footer-bar">
+          <span className="nav-overlay__footer-tagline">Regenerate. Restore. Refined.</span>
+          <div className="nav-overlay__footer-links">
+            <button onClick={close}>Instagram</button>
+            <span className="nav-overlay__footer-dot">·</span>
+            <button onClick={() => go('/faq')}>Privacy Policy</button>
+            <span className="nav-overlay__footer-dot">·</span>
+            <button onClick={() => go('/faq')}>Terms</button>
+            <span className="nav-overlay__footer-dot">·</span>
+            <button onClick={() => go('/contact')}>Location</button>
           </div>
         </div>
 

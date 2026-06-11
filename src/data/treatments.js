@@ -33,6 +33,14 @@ import facialbalancing from './images/sub-treatments/face-sculpt/facial-balancin
 import main_img_two from './images/sub-treatments/main_img_two.png';
 
 
+import skinboosters from './images/sub-treatments/skin-glow/skin-boosters.png';
+import profhilo from './images/sub-treatments/skin-glow/profhilo.png';
+import polynucleotides from './images/sub-treatments/skin-glow/polynucleotides.png';
+import mesotherapy from './images/sub-treatments/skin-glow/mesotherapy.png';
+import prpfacial from './images/sub-treatments/skin-glow/prp-facial.png';
+import hydro2facial from './images/sub-treatments/skin-glow/hydro2-facial.png';
+// import ledtherapy from './images/sub-treatments/skin-glow/led-therapy.png';
+
 const TREATMENTS = [
   {
     num: '01',
@@ -318,7 +326,6 @@ const TREATMENTS = [
       },
     ],
   },
-
   {
     num: '03',
     label: 'Skin Glow',
@@ -374,50 +381,50 @@ const TREATMENTS = [
         name: 'Hydration and Radiance',
         description:
           'Injectable skin hydration treatments that improve glow, elasticity and surface smoothness.',
-        image: '/images/sub-treatments/skin-glow/skin-boosters.jpg',
+        image: skinboosters,
       },
       {
         title: 'Profhilo',
         name: 'Bio-Remodelling Glow',
         description:
           'A skin-quality treatment designed to hydrate and remodel the skin for improved firmness and radiance.',
-        image: '/images/sub-treatments/skin-glow/profhilo.jpg',
+        image: profhilo,
       },
       {
         title: 'Polynucleotides',
         name: 'Regenerative Skin Quality',
         description:
           'Supports skin repair, hydration and resilience for a healthier and more refreshed appearance.',
-        image: '/images/sub-treatments/skin-glow/polynucleotides.jpg',
+        image: polynucleotides,
       },
       {
         title: 'Mesotherapy',
         name: 'Vitamin Skin Infusion',
         description:
           'Uses micro-injections of skin-supporting ingredients to improve brightness and hydration.',
-        image: '/images/sub-treatments/skin-glow/mesotherapy.jpg',
+        image: mesotherapy,
       },
       {
         title: 'PRP Facial',
         name: 'Natural Regeneration',
         description:
           'Uses platelet-rich plasma to support skin renewal, glow and collagen activity.',
-        image: '/images/sub-treatments/skin-glow/prp-facial.jpg',
+        image: prpfacial,
       },
       {
         title: '3D HydrO2 Facial',
         name: 'Deep Cleanse and Glow',
         description:
           'A multi-step facial treatment that cleanses, hydrates and refreshes the skin surface.',
-        image: '/images/sub-treatments/skin-glow/hydro2-facial.jpg',
+        image: hydro2facial,
       },
-      {
-        title: 'LED Light Therapy',
-        name: 'Calm and Boost',
-        description:
-          'Supports skin recovery, glow and calmness using targeted light therapy.',
-        image: '/images/sub-treatments/skin-glow/led-therapy.jpg',
-      },
+      // {
+      //   title: 'LED Light Therapy',
+      //   name: 'Calm and Boost',
+      //   description:
+      //     'Supports skin recovery, glow and calmness using targeted light therapy.',
+      //   image: ledtherapy,
+      // },
       {
         title: 'Pre-Event Glow',
         name: 'Fresh Skin Before Occasions',
@@ -987,438 +994,438 @@ const TREATMENTS = [
     ],
   },
 
-  {
-    num: '09',
-    label: 'Body Sculpt',
-    slug: 'body-sculpt',
-    image: '/assets/body_sculpt.png',
-    tagline: 'Shape, contour and refine the body without surgery.',
-    description:
-      'Body Sculpt covers non-surgical body contouring, fat reduction, body tightening, buttock enhancement, hip dip correction, laser hair removal and body confidence treatments. It includes fat-dissolving injections, fat freezing, cryolipolysis, RF body tightening, cavitation, shockwave, Lanluma butt lift, hip dip filler, PDO body thread lift and weight-loss support where suitable.',
-    benefits: [
-      'Improves body shape and contour',
-      'Targets stubborn localised fat pockets',
-      'Supports firmer, smoother-looking body skin',
-      'Includes non-surgical buttock and hip treatments',
-      'Creates a clear body treatment pathway on the website',
-    ],
-    ideal:
-      'Ideal for clients wanting non-surgical body contouring, fat reduction, body tightening, buttock enhancement, hip dip correction, laser hair removal or body confidence treatments.',
-    faqs: [
-      {
-        q: 'Why should Body Sculpt be a separate category?',
-        a: 'Body treatments are very different from face treatments and should be easy for users to find without searching through facial categories.',
-      },
-      {
-        q: 'What treatments belong here?',
-        a: 'Fat-dissolving injections, fat freezing, cryolipolysis, RF body tightening, cavitation, shockwave, Lanluma butt lift, hip dip filler, PDO body threads, laser hair removal and weight-loss support.',
-      },
-      {
-        q: 'Are body results instant?',
-        a: 'Some treatments create gradual improvement over weeks, especially fat reduction, collagen stimulation and body tightening.',
-      },
-      {
-        q: 'Can body treatments be combined?',
-        a: 'Yes. Body contouring plans often combine fat reduction, tightening and skin texture treatments for a better outcome.',
-      },
-      {
-        q: 'Is consultation needed?',
-        a: 'Yes. Body treatments should be planned after assessment of the treatment area, suitability and expected outcome.',
-      },
-    ],
-    prices: [
-      { name: 'Body consultation', price: 'Consultation required' },
-      { name: 'Fat-dissolving injections', price: 'From clinic pricing' },
-      { name: 'Fat freezing / cryolipolysis', price: 'From clinic pricing' },
-      { name: 'RF body tightening', price: 'From clinic pricing' },
-      { name: 'Cavitation / shockwave', price: 'From clinic pricing' },
-      { name: 'Lanluma butt lift', price: 'From clinic pricing' },
-      { name: 'Hip dip filler', price: 'From clinic pricing' },
-      { name: 'Laser hair removal', price: 'From clinic pricing' },
-    ],
-    subTreatments: [
-      {
-        title: 'Fat-Dissolving Injections',
-        name: 'Target Stubborn Fat',
-        description:
-          'Targets small, stubborn fat pockets that do not respond easily to diet or exercise.',
-        image: '/images/sub-treatments/body-sculpt/fat-dissolving.jpg',
-      },
-      {
-        title: 'Fat Freezing',
-        name: 'Non-Surgical Fat Reduction',
-        description:
-          'Uses controlled cooling to support gradual reduction of localised fat cells.',
-        image: '/images/sub-treatments/body-sculpt/fat-freezing.jpg',
-      },
-      {
-        title: 'Cryolipolysis',
-        name: 'Body Contour Refinement',
-        description:
-          'A fat-freezing technology option used for non-surgical body contouring.',
-        image: '/images/sub-treatments/body-sculpt/cryolipolysis.jpg',
-      },
-      {
-        title: 'RF Body Tightening',
-        name: 'Firm and Smooth',
-        description:
-          'Uses radiofrequency energy to support firmer, tighter-looking body skin.',
-        image: '/images/sub-treatments/body-sculpt/rf-body-tightening.jpg',
-      },
-      {
-        title: 'Cavitation',
-        name: 'Contour Support',
-        description:
-          'A body contouring treatment often used as part of a fat reduction programme.',
-        image: '/images/sub-treatments/body-sculpt/cavitation.jpg',
-      },
-      {
-        title: 'Shockwave',
-        name: 'Texture and Circulation Support',
-        description:
-          'Often combined with other body treatments to support smoother-looking skin texture.',
-        image: '/images/sub-treatments/body-sculpt/shockwave.jpg',
-      },
-      {
-        title: 'Lanluma Butt Lift',
-        name: 'Collagen-Based Volume',
-        description:
-          'A non-surgical buttock enhancement treatment designed to stimulate collagen and improve shape.',
-        image: '/images/sub-treatments/body-sculpt/lanluma-butt-lift.jpg',
-      },
-      {
-        title: 'Hip Dip Filler',
-        name: 'Smooth Body Silhouette',
-        description:
-          'Uses filler to soften hip dips and improve body contour balance.',
-        image: '/images/sub-treatments/body-sculpt/hip-dip-filler.jpg',
-      },
-      {
-        title: 'PDO Body Thread Lift',
-        name: 'Body Skin Support',
-        description:
-          'Uses body threads to support selected areas where lifting or tightening is needed.',
-        image: '/images/sub-treatments/body-sculpt/pdo-body-threads.jpg',
-      },
-      {
-        title: 'Laser Hair Removal',
-        name: 'Smooth Skin Treatment',
-        description:
-          'Reduces unwanted hair growth using laser technology across selected body areas.',
-        image: '/images/sub-treatments/body-sculpt/laser-hair-removal.jpg',
-      },
-      {
-        title: 'Weight Loss Programme',
-        name: 'Body Confidence Support',
-        description:
-          'A structured programme for clients seeking additional weight and body-shape support.',
-        image: '/images/sub-treatments/body-sculpt/weight-loss.jpg',
-      },
-    ],
-  },
+  // {
+  //   num: '09',
+  //   label: 'Body Sculpt',
+  //   slug: 'body-sculpt',
+  //   image: '/assets/body_sculpt.png',
+  //   tagline: 'Shape, contour and refine the body without surgery.',
+  //   description:
+  //     'Body Sculpt covers non-surgical body contouring, fat reduction, body tightening, buttock enhancement, hip dip correction, laser hair removal and body confidence treatments. It includes fat-dissolving injections, fat freezing, cryolipolysis, RF body tightening, cavitation, shockwave, Lanluma butt lift, hip dip filler, PDO body thread lift and weight-loss support where suitable.',
+  //   benefits: [
+  //     'Improves body shape and contour',
+  //     'Targets stubborn localised fat pockets',
+  //     'Supports firmer, smoother-looking body skin',
+  //     'Includes non-surgical buttock and hip treatments',
+  //     'Creates a clear body treatment pathway on the website',
+  //   ],
+  //   ideal:
+  //     'Ideal for clients wanting non-surgical body contouring, fat reduction, body tightening, buttock enhancement, hip dip correction, laser hair removal or body confidence treatments.',
+  //   faqs: [
+  //     {
+  //       q: 'Why should Body Sculpt be a separate category?',
+  //       a: 'Body treatments are very different from face treatments and should be easy for users to find without searching through facial categories.',
+  //     },
+  //     {
+  //       q: 'What treatments belong here?',
+  //       a: 'Fat-dissolving injections, fat freezing, cryolipolysis, RF body tightening, cavitation, shockwave, Lanluma butt lift, hip dip filler, PDO body threads, laser hair removal and weight-loss support.',
+  //     },
+  //     {
+  //       q: 'Are body results instant?',
+  //       a: 'Some treatments create gradual improvement over weeks, especially fat reduction, collagen stimulation and body tightening.',
+  //     },
+  //     {
+  //       q: 'Can body treatments be combined?',
+  //       a: 'Yes. Body contouring plans often combine fat reduction, tightening and skin texture treatments for a better outcome.',
+  //     },
+  //     {
+  //       q: 'Is consultation needed?',
+  //       a: 'Yes. Body treatments should be planned after assessment of the treatment area, suitability and expected outcome.',
+  //     },
+  //   ],
+  //   prices: [
+  //     { name: 'Body consultation', price: 'Consultation required' },
+  //     { name: 'Fat-dissolving injections', price: 'From clinic pricing' },
+  //     { name: 'Fat freezing / cryolipolysis', price: 'From clinic pricing' },
+  //     { name: 'RF body tightening', price: 'From clinic pricing' },
+  //     { name: 'Cavitation / shockwave', price: 'From clinic pricing' },
+  //     { name: 'Lanluma butt lift', price: 'From clinic pricing' },
+  //     { name: 'Hip dip filler', price: 'From clinic pricing' },
+  //     { name: 'Laser hair removal', price: 'From clinic pricing' },
+  //   ],
+  //   subTreatments: [
+  //     {
+  //       title: 'Fat-Dissolving Injections',
+  //       name: 'Target Stubborn Fat',
+  //       description:
+  //         'Targets small, stubborn fat pockets that do not respond easily to diet or exercise.',
+  //       image: '/images/sub-treatments/body-sculpt/fat-dissolving.jpg',
+  //     },
+  //     {
+  //       title: 'Fat Freezing',
+  //       name: 'Non-Surgical Fat Reduction',
+  //       description:
+  //         'Uses controlled cooling to support gradual reduction of localised fat cells.',
+  //       image: '/images/sub-treatments/body-sculpt/fat-freezing.jpg',
+  //     },
+  //     {
+  //       title: 'Cryolipolysis',
+  //       name: 'Body Contour Refinement',
+  //       description:
+  //         'A fat-freezing technology option used for non-surgical body contouring.',
+  //       image: '/images/sub-treatments/body-sculpt/cryolipolysis.jpg',
+  //     },
+  //     {
+  //       title: 'RF Body Tightening',
+  //       name: 'Firm and Smooth',
+  //       description:
+  //         'Uses radiofrequency energy to support firmer, tighter-looking body skin.',
+  //       image: '/images/sub-treatments/body-sculpt/rf-body-tightening.jpg',
+  //     },
+  //     {
+  //       title: 'Cavitation',
+  //       name: 'Contour Support',
+  //       description:
+  //         'A body contouring treatment often used as part of a fat reduction programme.',
+  //       image: '/images/sub-treatments/body-sculpt/cavitation.jpg',
+  //     },
+  //     {
+  //       title: 'Shockwave',
+  //       name: 'Texture and Circulation Support',
+  //       description:
+  //         'Often combined with other body treatments to support smoother-looking skin texture.',
+  //       image: '/images/sub-treatments/body-sculpt/shockwave.jpg',
+  //     },
+  //     {
+  //       title: 'Lanluma Butt Lift',
+  //       name: 'Collagen-Based Volume',
+  //       description:
+  //         'A non-surgical buttock enhancement treatment designed to stimulate collagen and improve shape.',
+  //       image: '/images/sub-treatments/body-sculpt/lanluma-butt-lift.jpg',
+  //     },
+  //     {
+  //       title: 'Hip Dip Filler',
+  //       name: 'Smooth Body Silhouette',
+  //       description:
+  //         'Uses filler to soften hip dips and improve body contour balance.',
+  //       image: '/images/sub-treatments/body-sculpt/hip-dip-filler.jpg',
+  //     },
+  //     {
+  //       title: 'PDO Body Thread Lift',
+  //       name: 'Body Skin Support',
+  //       description:
+  //         'Uses body threads to support selected areas where lifting or tightening is needed.',
+  //       image: '/images/sub-treatments/body-sculpt/pdo-body-threads.jpg',
+  //     },
+  //     {
+  //       title: 'Laser Hair Removal',
+  //       name: 'Smooth Skin Treatment',
+  //       description:
+  //         'Reduces unwanted hair growth using laser technology across selected body areas.',
+  //       image: '/images/sub-treatments/body-sculpt/laser-hair-removal.jpg',
+  //     },
+  //     {
+  //       title: 'Weight Loss Programme',
+  //       name: 'Body Confidence Support',
+  //       description:
+  //         'A structured programme for clients seeking additional weight and body-shape support.',
+  //       image: '/images/sub-treatments/body-sculpt/weight-loss.jpg',
+  //     },
+  //   ],
+  // },
 
-  {
-    num: '10',
-    label: 'Hair Restore',
-    slug: 'hair-restore',
-    image: '/assets/hair_restore.png',
-    tagline: 'Support thinning hair, scalp health and natural hair density.',
-    description:
-      'Hair Restore is focused on hair loss, thinning hair and scalp regeneration. It can include PRP hair loss treatment, microneedling with PRP, stem cell growth factor treatment, scalp rejuvenation and male or female hair density support. This category is important because hair loss clients usually search directly for hair treatments, not general aesthetics.',
-    benefits: [
-      'Supports scalp health and hair density',
-      'Creates a clear pathway for hair loss clients',
-      'Suitable for male and female hair thinning concerns',
-      'Can use regenerative treatment options',
-      'Works best as a planned course where suitable',
-    ],
-    ideal:
-      'Ideal for clients experiencing hair thinning, reduced density, early hair loss, scalp concerns or clients looking for regenerative hair support.',
-    faqs: [
-      {
-        q: 'What treatments belong in Hair Restore?',
-        a: 'PRP hair loss treatment, microneedling with PRP, stem cell growth factor treatment, scalp rejuvenation and hair density support.',
-      },
-      {
-        q: 'Is PRP used for hair loss?',
-        a: 'Yes. PRP is commonly used as a regenerative treatment option to support scalp and hair density in suitable clients.',
-      },
-      {
-        q: 'Does hair treatment need a course?',
-        a: 'Hair restoration treatments usually work best as a course, with maintenance depending on the client’s response and goals.',
-      },
-      {
-        q: 'Is it only for men?',
-        a: 'No. Hair Restore can support both male and female hair thinning concerns after consultation.',
-      },
-      {
-        q: 'When can results appear?',
-        a: 'Hair results are gradual and may take several months to become visible because hair growth cycles take time.',
-      },
-    ],
-    prices: [
-      { name: 'Hair loss consultation', price: 'Consultation required' },
-      { name: 'PRP hair loss treatment', price: 'From clinic pricing' },
-      { name: 'Microneedling and PRP for hair loss', price: 'From clinic pricing' },
-      { name: 'Stem cell growth factor for hair loss', price: 'From clinic pricing' },
-      { name: 'Hair restoration course', price: 'Bespoke quote' },
-      { name: 'Maintenance session', price: 'From clinic pricing' },
-    ],
-    subTreatments: [
-      {
-        title: 'PRP Hair Loss',
-        name: 'Regenerative Hair Support',
-        description:
-          'Uses platelet-rich plasma to support scalp health and natural hair density in suitable clients.',
-        image: '/images/sub-treatments/hair-restore/prp-hair-loss.jpg',
-      },
-      {
-        title: 'Microneedling with PRP',
-        name: 'Scalp Stimulation',
-        description:
-          'Combines microneedling with PRP to support scalp activity and hair restoration plans.',
-        image: '/images/sub-treatments/hair-restore/microneedling-prp.jpg',
-      },
-      {
-        title: 'Stem Cell Growth Factor',
-        name: 'Advanced Hair Support',
-        description:
-          'A specialist regenerative option designed to support hair density and scalp health.',
-        image: '/images/sub-treatments/hair-restore/stem-cell-growth.jpg',
-      },
-      {
-        title: 'Male Hair Loss',
-        name: 'Men’s Hair Density Plan',
-        description:
-          'A tailored plan for male-pattern thinning or reduced density after consultation.',
-        image: '/images/sub-treatments/hair-restore/male-hair-loss.jpg',
-      },
-      {
-        title: 'Female Hair Loss',
-        name: 'Women’s Hair Support',
-        description:
-          'A tailored approach for women experiencing thinning, shedding or reduced density.',
-        image: '/images/sub-treatments/hair-restore/female-hair-loss.jpg',
-      },
-      {
-        title: 'Scalp Rejuvenation',
-        name: 'Healthy Scalp Foundation',
-        description:
-          'Supports scalp quality as part of a wider hair restoration programme.',
-        image: '/images/sub-treatments/hair-restore/scalp-rejuvenation.jpg',
-      },
-    ],
-  },
+  // {
+  //   num: '10',
+  //   label: 'Hair Restore',
+  //   slug: 'hair-restore',
+  //   image: '/assets/hair_restore.png',
+  //   tagline: 'Support thinning hair, scalp health and natural hair density.',
+  //   description:
+  //     'Hair Restore is focused on hair loss, thinning hair and scalp regeneration. It can include PRP hair loss treatment, microneedling with PRP, stem cell growth factor treatment, scalp rejuvenation and male or female hair density support. This category is important because hair loss clients usually search directly for hair treatments, not general aesthetics.',
+  //   benefits: [
+  //     'Supports scalp health and hair density',
+  //     'Creates a clear pathway for hair loss clients',
+  //     'Suitable for male and female hair thinning concerns',
+  //     'Can use regenerative treatment options',
+  //     'Works best as a planned course where suitable',
+  //   ],
+  //   ideal:
+  //     'Ideal for clients experiencing hair thinning, reduced density, early hair loss, scalp concerns or clients looking for regenerative hair support.',
+  //   faqs: [
+  //     {
+  //       q: 'What treatments belong in Hair Restore?',
+  //       a: 'PRP hair loss treatment, microneedling with PRP, stem cell growth factor treatment, scalp rejuvenation and hair density support.',
+  //     },
+  //     {
+  //       q: 'Is PRP used for hair loss?',
+  //       a: 'Yes. PRP is commonly used as a regenerative treatment option to support scalp and hair density in suitable clients.',
+  //     },
+  //     {
+  //       q: 'Does hair treatment need a course?',
+  //       a: 'Hair restoration treatments usually work best as a course, with maintenance depending on the client’s response and goals.',
+  //     },
+  //     {
+  //       q: 'Is it only for men?',
+  //       a: 'No. Hair Restore can support both male and female hair thinning concerns after consultation.',
+  //     },
+  //     {
+  //       q: 'When can results appear?',
+  //       a: 'Hair results are gradual and may take several months to become visible because hair growth cycles take time.',
+  //     },
+  //   ],
+  //   prices: [
+  //     { name: 'Hair loss consultation', price: 'Consultation required' },
+  //     { name: 'PRP hair loss treatment', price: 'From clinic pricing' },
+  //     { name: 'Microneedling and PRP for hair loss', price: 'From clinic pricing' },
+  //     { name: 'Stem cell growth factor for hair loss', price: 'From clinic pricing' },
+  //     { name: 'Hair restoration course', price: 'Bespoke quote' },
+  //     { name: 'Maintenance session', price: 'From clinic pricing' },
+  //   ],
+  //   subTreatments: [
+  //     {
+  //       title: 'PRP Hair Loss',
+  //       name: 'Regenerative Hair Support',
+  //       description:
+  //         'Uses platelet-rich plasma to support scalp health and natural hair density in suitable clients.',
+  //       image: '/images/sub-treatments/hair-restore/prp-hair-loss.jpg',
+  //     },
+  //     {
+  //       title: 'Microneedling with PRP',
+  //       name: 'Scalp Stimulation',
+  //       description:
+  //         'Combines microneedling with PRP to support scalp activity and hair restoration plans.',
+  //       image: '/images/sub-treatments/hair-restore/microneedling-prp.jpg',
+  //     },
+  //     {
+  //       title: 'Stem Cell Growth Factor',
+  //       name: 'Advanced Hair Support',
+  //       description:
+  //         'A specialist regenerative option designed to support hair density and scalp health.',
+  //       image: '/images/sub-treatments/hair-restore/stem-cell-growth.jpg',
+  //     },
+  //     {
+  //       title: 'Male Hair Loss',
+  //       name: 'Men’s Hair Density Plan',
+  //       description:
+  //         'A tailored plan for male-pattern thinning or reduced density after consultation.',
+  //       image: '/images/sub-treatments/hair-restore/male-hair-loss.jpg',
+  //     },
+  //     {
+  //       title: 'Female Hair Loss',
+  //       name: 'Women’s Hair Support',
+  //       description:
+  //         'A tailored approach for women experiencing thinning, shedding or reduced density.',
+  //       image: '/images/sub-treatments/hair-restore/female-hair-loss.jpg',
+  //     },
+  //     {
+  //       title: 'Scalp Rejuvenation',
+  //       name: 'Healthy Scalp Foundation',
+  //       description:
+  //         'Supports scalp quality as part of a wider hair restoration programme.',
+  //       image: '/images/sub-treatments/hair-restore/scalp-rejuvenation.jpg',
+  //     },
+  //   ],
+  // },
 
-  {
-    num: '11',
-    label: 'Men’s Aesthetics',
-    slug: 'mens-aesthetics',
-    image: '/assets/mens_aesthetics.png',
-    tagline: 'Subtle, masculine treatments for face, skin, hair and body confidence.',
-    description:
-      'Men’s Aesthetics gives male clients a clear path to treatments designed around masculine facial structure and common male concerns. It can include Botox for men, facial fillers, jawline enhancement, hair loss treatment, microneedling, Profhilo for men, PRP facials, fat-dissolving injections, PRP Shot, Scrotox and male skin plans.',
-    benefits: [
-      'Keeps male treatments easy to find',
-      'Supports masculine facial balance and definition',
-      'Covers hair, skin, body and intimate wellness concerns',
-      'Encourages subtle, confidence-led results',
-      'Improves website navigation for male clients',
-    ],
-    ideal:
-      'Ideal for male clients seeking natural anti-ageing, jawline definition, hair loss support, skin quality improvement, body contouring or men’s wellness treatments.',
-    faqs: [
-      {
-        q: 'Why create a Men’s Aesthetics category?',
-        a: 'Men often search differently and may want reassurance that treatments are tailored to masculine anatomy and subtle results.',
-      },
-      {
-        q: 'What treatments belong here?',
-        a: 'Botox for men, facial fillers for men, hair loss treatment, microneedling, Profhilo, PRP facials, fat-dissolving injections, PRP Shot, Scrotox and jawline enhancement.',
-      },
-      {
-        q: 'Will treatments look obvious?',
-        a: 'The goal is usually subtle improvement: looking sharper, fresher and more rested without looking treated.',
-      },
-      {
-        q: 'Can men’s treatments overlap with other categories?',
-        a: 'Yes. The same treatment can appear in Men’s Aesthetics and also inside Smooth Lines, Face Sculpt, Hair Restore or Clear Skin.',
-      },
-      {
-        q: 'Should PRP Shot and Scrotox be listed publicly?',
-        a: 'Yes, if the clinic offers them, but use clear, professional language and place details on dedicated pages.',
-      },
-    ],
-    prices: [
-      { name: 'Men’s consultation', price: 'Consultation required' },
-      { name: 'Botox for men', price: 'From clinic pricing' },
-      { name: 'Facial fillers for men', price: 'From clinic pricing' },
-      { name: 'Hair loss treatment', price: 'From clinic pricing' },
-      { name: 'Microneedling for men', price: 'From clinic pricing' },
-      { name: 'Profhilo / PRP facial for men', price: 'From clinic pricing' },
-      { name: 'PRP Shot', price: 'From clinic pricing' },
-      { name: 'Scrotox', price: 'From clinic pricing' },
-    ],
-    subTreatments: [
-      {
-        title: 'Botox for Men',
-        name: 'Natural, Rested Look',
-        description:
-          'Softens expression lines while preserving masculine expression and facial character.',
-        image: '/images/sub-treatments/mens-aesthetics/botox-for-men.jpg',
-      },
-      {
-        title: 'Facial Fillers for Men',
-        name: 'Structure and Definition',
-        description:
-          'Enhances facial balance, volume and definition with a male-focused approach.',
-        image: '/images/sub-treatments/mens-aesthetics/facial-fillers-men.jpg',
-      },
-      {
-        title: 'Jawline Enhancement',
-        name: 'Sharper Lower Face',
-        description:
-          'Defines the jawline and chin to improve masculine facial structure and profile.',
-        image: '/images/sub-treatments/mens-aesthetics/jawline-enhancement.jpg',
-      },
-      {
-        title: 'Hair Loss Treatment',
-        name: 'Density and Scalp Support',
-        description:
-          'Supports male hair thinning using regenerative treatment options such as PRP.',
-        image: '/images/sub-treatments/mens-aesthetics/hair-loss-treatment.jpg',
-      },
-      {
-        title: 'Microneedling for Men',
-        name: 'Texture and Scar Improvement',
-        description:
-          'Improves skin texture, pores and scarring while supporting collagen production.',
-        image: '/images/sub-treatments/mens-aesthetics/microneedling-men.jpg',
-      },
-      {
-        title: 'Profhilo for Men',
-        name: 'Hydration and Skin Quality',
-        description:
-          'Improves skin quality without changing facial shape or adding obvious volume.',
-        image: '/images/sub-treatments/mens-aesthetics/profhilo-men.jpg',
-      },
-      {
-        title: 'PRP Shot',
-        name: 'Men’s Wellness Treatment',
-        description:
-          'A specialist PRP-based treatment option for male sexual wellness concerns.',
-        image: '/images/sub-treatments/mens-aesthetics/prp-shot.jpg',
-      },
-      {
-        title: 'Scrotox',
-        name: 'Men’s Intimate Aesthetic Treatment',
-        description:
-          'A specialist men’s treatment that should be explained professionally on a dedicated page.',
-        image: '/images/sub-treatments/mens-aesthetics/scrotox.jpg',
-      },
-    ],
-  },
+  // {
+  //   num: '11',
+  //   label: 'Men’s Aesthetics',
+  //   slug: 'mens-aesthetics',
+  //   image: '/assets/mens_aesthetics.png',
+  //   tagline: 'Subtle, masculine treatments for face, skin, hair and body confidence.',
+  //   description:
+  //     'Men’s Aesthetics gives male clients a clear path to treatments designed around masculine facial structure and common male concerns. It can include Botox for men, facial fillers, jawline enhancement, hair loss treatment, microneedling, Profhilo for men, PRP facials, fat-dissolving injections, PRP Shot, Scrotox and male skin plans.',
+  //   benefits: [
+  //     'Keeps male treatments easy to find',
+  //     'Supports masculine facial balance and definition',
+  //     'Covers hair, skin, body and intimate wellness concerns',
+  //     'Encourages subtle, confidence-led results',
+  //     'Improves website navigation for male clients',
+  //   ],
+  //   ideal:
+  //     'Ideal for male clients seeking natural anti-ageing, jawline definition, hair loss support, skin quality improvement, body contouring or men’s wellness treatments.',
+  //   faqs: [
+  //     {
+  //       q: 'Why create a Men’s Aesthetics category?',
+  //       a: 'Men often search differently and may want reassurance that treatments are tailored to masculine anatomy and subtle results.',
+  //     },
+  //     {
+  //       q: 'What treatments belong here?',
+  //       a: 'Botox for men, facial fillers for men, hair loss treatment, microneedling, Profhilo, PRP facials, fat-dissolving injections, PRP Shot, Scrotox and jawline enhancement.',
+  //     },
+  //     {
+  //       q: 'Will treatments look obvious?',
+  //       a: 'The goal is usually subtle improvement: looking sharper, fresher and more rested without looking treated.',
+  //     },
+  //     {
+  //       q: 'Can men’s treatments overlap with other categories?',
+  //       a: 'Yes. The same treatment can appear in Men’s Aesthetics and also inside Smooth Lines, Face Sculpt, Hair Restore or Clear Skin.',
+  //     },
+  //     {
+  //       q: 'Should PRP Shot and Scrotox be listed publicly?',
+  //       a: 'Yes, if the clinic offers them, but use clear, professional language and place details on dedicated pages.',
+  //     },
+  //   ],
+  //   prices: [
+  //     { name: 'Men’s consultation', price: 'Consultation required' },
+  //     { name: 'Botox for men', price: 'From clinic pricing' },
+  //     { name: 'Facial fillers for men', price: 'From clinic pricing' },
+  //     { name: 'Hair loss treatment', price: 'From clinic pricing' },
+  //     { name: 'Microneedling for men', price: 'From clinic pricing' },
+  //     { name: 'Profhilo / PRP facial for men', price: 'From clinic pricing' },
+  //     { name: 'PRP Shot', price: 'From clinic pricing' },
+  //     { name: 'Scrotox', price: 'From clinic pricing' },
+  //   ],
+  //   subTreatments: [
+  //     {
+  //       title: 'Botox for Men',
+  //       name: 'Natural, Rested Look',
+  //       description:
+  //         'Softens expression lines while preserving masculine expression and facial character.',
+  //       image: '/images/sub-treatments/mens-aesthetics/botox-for-men.jpg',
+  //     },
+  //     {
+  //       title: 'Facial Fillers for Men',
+  //       name: 'Structure and Definition',
+  //       description:
+  //         'Enhances facial balance, volume and definition with a male-focused approach.',
+  //       image: '/images/sub-treatments/mens-aesthetics/facial-fillers-men.jpg',
+  //     },
+  //     {
+  //       title: 'Jawline Enhancement',
+  //       name: 'Sharper Lower Face',
+  //       description:
+  //         'Defines the jawline and chin to improve masculine facial structure and profile.',
+  //       image: '/images/sub-treatments/mens-aesthetics/jawline-enhancement.jpg',
+  //     },
+  //     {
+  //       title: 'Hair Loss Treatment',
+  //       name: 'Density and Scalp Support',
+  //       description:
+  //         'Supports male hair thinning using regenerative treatment options such as PRP.',
+  //       image: '/images/sub-treatments/mens-aesthetics/hair-loss-treatment.jpg',
+  //     },
+  //     {
+  //       title: 'Microneedling for Men',
+  //       name: 'Texture and Scar Improvement',
+  //       description:
+  //         'Improves skin texture, pores and scarring while supporting collagen production.',
+  //       image: '/images/sub-treatments/mens-aesthetics/microneedling-men.jpg',
+  //     },
+  //     {
+  //       title: 'Profhilo for Men',
+  //       name: 'Hydration and Skin Quality',
+  //       description:
+  //         'Improves skin quality without changing facial shape or adding obvious volume.',
+  //       image: '/images/sub-treatments/mens-aesthetics/profhilo-men.jpg',
+  //     },
+  //     {
+  //       title: 'PRP Shot',
+  //       name: 'Men’s Wellness Treatment',
+  //       description:
+  //         'A specialist PRP-based treatment option for male sexual wellness concerns.',
+  //       image: '/images/sub-treatments/mens-aesthetics/prp-shot.jpg',
+  //     },
+  //     {
+  //       title: 'Scrotox',
+  //       name: 'Men’s Intimate Aesthetic Treatment',
+  //       description:
+  //         'A specialist men’s treatment that should be explained professionally on a dedicated page.',
+  //       image: '/images/sub-treatments/mens-aesthetics/scrotox.jpg',
+  //     },
+  //   ],
+  // },
 
-  {
-    num: '12',
-    label: 'Advanced Skincare',
-    slug: 'advanced-skincare',
-    image: '/assets/advanced_skincare.png',
-    tagline: 'Professional skincare plans for long-term skin health and correction.',
-    description:
-      'Advanced Skincare is the home for consultations, medical-grade skincare, homecare routines and long-term plans for acne, pigmentation, anti-ageing, redness, barrier repair and maintenance. This category bridges the gap between in-clinic treatments and daily skincare, making results more consistent and sustainable.',
-    benefits: [
-      'Supports long-term skin health',
-      'Improves maintenance between clinic treatments',
-      'Targets acne, pigmentation and ageing concerns',
-      'Creates a clear skincare consultation pathway',
-      'Helps clients choose products safely and correctly',
-    ],
-    ideal:
-      'Ideal for clients wanting professional help with skincare routines, acne control, pigmentation, ageing prevention, sensitivity, barrier repair or post-treatment maintenance.',
-    faqs: [
-      {
-        q: 'Why should skincare be separate from Clear Skin?',
-        a: 'Clear Skin is concern-led, while Advanced Skincare covers long-term homecare, product planning and skin health across all concerns.',
-      },
-      {
-        q: 'What should be included here?',
-        a: 'Skin consultation, medical-grade skincare, acne skincare, pigmentation skincare, anti-ageing skincare, barrier repair, brightening plans and maintenance plans.',
-      },
-      {
-        q: 'Can skincare improve treatment results?',
-        a: 'Yes. The right homecare can prepare the skin, improve results and help maintain outcomes after clinic treatments.',
-      },
-      {
-        q: 'Is this only for problem skin?',
-        a: 'No. It is also useful for prevention, maintenance, glow, hydration and healthy ageing.',
-      },
-      {
-        q: 'Should product brands be listed?',
-        a: 'Only list brands that the clinic genuinely stocks or prescribes. Keep the category brand-flexible if stock changes.',
-      },
-    ],
-    prices: [
-      { name: 'Skin consultation', price: 'Consultation required' },
-      { name: 'Personalised skincare plan', price: 'Bespoke quote' },
-      { name: 'Acne skincare plan', price: 'Bespoke quote' },
-      { name: 'Pigmentation skincare plan', price: 'Bespoke quote' },
-      { name: 'Anti-ageing skincare plan', price: 'Bespoke quote' },
-      { name: 'Barrier repair plan', price: 'Bespoke quote' },
-      { name: 'Post-treatment maintenance plan', price: 'Bespoke quote' },
-    ],
-    subTreatments: [
-      {
-        title: 'Skin Consultation',
-        name: 'Understand Your Skin',
-        description:
-          'A professional assessment to identify skin type, concerns and the best treatment pathway.',
-        image: '/images/sub-treatments/advanced-skincare/skin-consultation.jpg',
-      },
-      {
-        title: 'Medical-Grade Skincare',
-        name: 'Clinic-Led Homecare',
-        description:
-          'Professional skincare selected to support results and target specific concerns.',
-        image: '/images/sub-treatments/advanced-skincare/medical-skincare.jpg',
-      },
-      {
-        title: 'Acne Skincare',
-        name: 'Breakout Control at Home',
-        description:
-          'A structured routine to reduce congestion, oil imbalance and recurring breakouts.',
-        image: '/images/sub-treatments/advanced-skincare/acne-skincare.jpg',
-      },
-      {
-        title: 'Pigmentation Skincare',
-        name: 'Brighten Uneven Tone',
-        description:
-          'Targets dark spots, sun damage and post-inflammatory pigmentation with a guided routine.',
-        image: '/images/sub-treatments/advanced-skincare/pigmentation-skincare.jpg',
-      },
-      {
-        title: 'Anti-Ageing Skincare',
-        name: 'Protect and Maintain',
-        description:
-          'Supports collagen, hydration and daily skin protection as part of a long-term ageing plan.',
-        image: '/images/sub-treatments/advanced-skincare/anti-ageing-skincare.jpg',
-      },
-      {
-        title: 'Barrier Repair',
-        name: 'Calm and Strengthen',
-        description:
-          'A routine focused on sensitivity, dryness, redness and damaged skin barrier support.',
-        image: '/images/sub-treatments/advanced-skincare/barrier-repair.jpg',
-      },
-      {
-        title: 'Maintenance Plan',
-        name: 'Keep Results Lasting',
-        description:
-          'A homecare strategy designed to protect and extend your in-clinic treatment results.',
-        image: '/images/sub-treatments/advanced-skincare/maintenance-plan.jpg',
-      },
-    ],
-  },
+  // {
+  //   num: '12',
+  //   label: 'Advanced Skincare',
+  //   slug: 'advanced-skincare',
+  //   image: '/assets/advanced_skincare.png',
+  //   tagline: 'Professional skincare plans for long-term skin health and correction.',
+  //   description:
+  //     'Advanced Skincare is the home for consultations, medical-grade skincare, homecare routines and long-term plans for acne, pigmentation, anti-ageing, redness, barrier repair and maintenance. This category bridges the gap between in-clinic treatments and daily skincare, making results more consistent and sustainable.',
+  //   benefits: [
+  //     'Supports long-term skin health',
+  //     'Improves maintenance between clinic treatments',
+  //     'Targets acne, pigmentation and ageing concerns',
+  //     'Creates a clear skincare consultation pathway',
+  //     'Helps clients choose products safely and correctly',
+  //   ],
+  //   ideal:
+  //     'Ideal for clients wanting professional help with skincare routines, acne control, pigmentation, ageing prevention, sensitivity, barrier repair or post-treatment maintenance.',
+  //   faqs: [
+  //     {
+  //       q: 'Why should skincare be separate from Clear Skin?',
+  //       a: 'Clear Skin is concern-led, while Advanced Skincare covers long-term homecare, product planning and skin health across all concerns.',
+  //     },
+  //     {
+  //       q: 'What should be included here?',
+  //       a: 'Skin consultation, medical-grade skincare, acne skincare, pigmentation skincare, anti-ageing skincare, barrier repair, brightening plans and maintenance plans.',
+  //     },
+  //     {
+  //       q: 'Can skincare improve treatment results?',
+  //       a: 'Yes. The right homecare can prepare the skin, improve results and help maintain outcomes after clinic treatments.',
+  //     },
+  //     {
+  //       q: 'Is this only for problem skin?',
+  //       a: 'No. It is also useful for prevention, maintenance, glow, hydration and healthy ageing.',
+  //     },
+  //     {
+  //       q: 'Should product brands be listed?',
+  //       a: 'Only list brands that the clinic genuinely stocks or prescribes. Keep the category brand-flexible if stock changes.',
+  //     },
+  //   ],
+  //   prices: [
+  //     { name: 'Skin consultation', price: 'Consultation required' },
+  //     { name: 'Personalised skincare plan', price: 'Bespoke quote' },
+  //     { name: 'Acne skincare plan', price: 'Bespoke quote' },
+  //     { name: 'Pigmentation skincare plan', price: 'Bespoke quote' },
+  //     { name: 'Anti-ageing skincare plan', price: 'Bespoke quote' },
+  //     { name: 'Barrier repair plan', price: 'Bespoke quote' },
+  //     { name: 'Post-treatment maintenance plan', price: 'Bespoke quote' },
+  //   ],
+  //   subTreatments: [
+  //     {
+  //       title: 'Skin Consultation',
+  //       name: 'Understand Your Skin',
+  //       description:
+  //         'A professional assessment to identify skin type, concerns and the best treatment pathway.',
+  //       image: '/images/sub-treatments/advanced-skincare/skin-consultation.jpg',
+  //     },
+  //     {
+  //       title: 'Medical-Grade Skincare',
+  //       name: 'Clinic-Led Homecare',
+  //       description:
+  //         'Professional skincare selected to support results and target specific concerns.',
+  //       image: '/images/sub-treatments/advanced-skincare/medical-skincare.jpg',
+  //     },
+  //     {
+  //       title: 'Acne Skincare',
+  //       name: 'Breakout Control at Home',
+  //       description:
+  //         'A structured routine to reduce congestion, oil imbalance and recurring breakouts.',
+  //       image: '/images/sub-treatments/advanced-skincare/acne-skincare.jpg',
+  //     },
+  //     {
+  //       title: 'Pigmentation Skincare',
+  //       name: 'Brighten Uneven Tone',
+  //       description:
+  //         'Targets dark spots, sun damage and post-inflammatory pigmentation with a guided routine.',
+  //       image: '/images/sub-treatments/advanced-skincare/pigmentation-skincare.jpg',
+  //     },
+  //     {
+  //       title: 'Anti-Ageing Skincare',
+  //       name: 'Protect and Maintain',
+  //       description:
+  //         'Supports collagen, hydration and daily skin protection as part of a long-term ageing plan.',
+  //       image: '/images/sub-treatments/advanced-skincare/anti-ageing-skincare.jpg',
+  //     },
+  //     {
+  //       title: 'Barrier Repair',
+  //       name: 'Calm and Strengthen',
+  //       description:
+  //         'A routine focused on sensitivity, dryness, redness and damaged skin barrier support.',
+  //       image: '/images/sub-treatments/advanced-skincare/barrier-repair.jpg',
+  //     },
+  //     {
+  //       title: 'Maintenance Plan',
+  //       name: 'Keep Results Lasting',
+  //       description:
+  //         'A homecare strategy designed to protect and extend your in-clinic treatment results.',
+  //       image: '/images/sub-treatments/advanced-skincare/maintenance-plan.jpg',
+  //     },
+  //   ],
+  // },
 ];
 
 export default TREATMENTS;

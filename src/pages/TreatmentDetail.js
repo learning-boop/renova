@@ -1,20 +1,21 @@
 import { useState } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
-import TREATMENTS from '../data/treatments';
+import { useParams, Navigate } from 'react-router-dom';
+import { useTreatments } from '../context/TreatmentsContext';
 import PinnedShowcase from '../components/PinnedShowcase';
-import CtaSection from '../components/CtaSection';
 import QuickContact from '../components/QuickContact';
 import './pages.css';
 import './TreatmentDetail.css';
 
 function TreatmentDetail() {
   const { slug } = useParams();
-  const treatment = TREATMENTS.find((t) => t.slug === slug);
+  const { treatments, loading } = useTreatments();
+  const treatment = treatments.find((t) => t.slug === slug);
   const [openFaq, setOpenFaq] = useState(null);
   const [reviewIndex, setReviewIndex] = useState(0);
   const [slideDir, setSlideDir] = useState('right');
 
-  if (!treatment) return <Navigate to="/services" replace />;
+  if (loading) return null;
+  if (!treatment) return <Navigate to="/" replace />;
 
   const reviews = treatment.reviews || [];
   const prevReview = () => {

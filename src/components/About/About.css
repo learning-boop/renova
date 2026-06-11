@@ -80,7 +80,7 @@
 }
 
 .pillar__text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--color-primary);
   line-height: 1.4;
@@ -102,5 +102,5 @@
   .about__image-wrap { height: 280px; }
   .about__accent { display: none; }
   .about__pillars { grid-template-columns: 1fr; gap: 14px; }
-  .about__content .section-subtitle { font-size: 14px; }
+  .about__content .section-subtitle { font-size: 15px; }
 }

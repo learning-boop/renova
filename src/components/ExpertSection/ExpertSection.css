@@ -31,10 +31,10 @@
 
 .ep-eyebrow {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 4.5px;
   text-transform: uppercase;
-  color: rgba(12, 15, 13, 0.45);
+  color: rgba(12, 15, 13, 0.78);
 }
 
 /* Arrow buttons */
@@ -141,11 +141,11 @@
 
 .ep-body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.9;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(12, 15, 13, 0.52);
+  color: rgba(12, 15, 13, 0.82);
   margin: 0;
 }
 

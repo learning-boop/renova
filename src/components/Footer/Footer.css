@@ -36,7 +36,7 @@
   font-size: 0.6rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(200, 169, 106, 0.55);
+  color: rgba(200, 169, 106, 0.88);
   line-height: 1;
 }
 
@@ -75,9 +75,9 @@
 .ft-col-links li,
 .ft-col-links a {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.07em;
-  color: rgba(248, 244, 239, 0.4);
+  color: rgba(248, 244, 239, 0.72);
   transition: color 0.25s ease;
   text-decoration: none;
   cursor: default;
@@ -153,7 +153,7 @@
   font-size: 0.57rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(248, 244, 239, 0.2);
+  color: rgba(248, 244, 239, 0.58);
 }
 
 /* Legal links */
@@ -167,7 +167,7 @@
   font-size: 0.57rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(248, 244, 239, 0.2);
+  color: rgba(248, 244, 239, 0.58);
   text-decoration: none;
   transition: color 0.25s ease;
 }

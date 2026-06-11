@@ -43,9 +43,9 @@
 /* ─── Mobile base ───────────────────────────────────────── */
 @media (max-width: 768px) {
   .container        { padding: 0 20px; }
-  .section-subtitle { font-size: 14px; }
+  .section-subtitle { font-size: 15px; }
   .btn-primary,
-  .btn-outline      { padding: 13px 28px; font-size: 12px; }
+  .btn-outline      { padding: 13px 28px; font-size: 13px; }
 }
 
 /* ─── Section Labels ─────────────────────────────────────── */
@@ -70,6 +70,6 @@
   font-size: 16px;
   line-height: 1.8;
   color: var(--color-primary);
-  opacity: 0.7;
+  opacity: 0.92;
   max-width: 560px;
 }

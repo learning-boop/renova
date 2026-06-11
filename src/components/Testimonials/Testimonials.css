@@ -41,7 +41,6 @@
   color: var(--color-primary);
   margin-bottom: 32px;
   font-style: italic;
-  opacity: 0.85;
 }
 
 .testimonial-card__author {
@@ -82,6 +81,6 @@
 @media (max-width: 560px) {
   .testimonials { padding: 60px 0; }
   .testimonial-card { padding: 32px 24px; }
-  .testimonial-card__text { font-size: 14px; }
+  .testimonial-card__text { font-size: 15px; }
   .testimonials__head { margin-bottom: 48px; }
 }

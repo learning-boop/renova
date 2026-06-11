@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import PageHero from '../components/PageHero';
-import TREATMENTS from '../data/treatments';
+import { useTreatments } from '../context/TreatmentsContext';
 import './pages.css';
 
 function Contact() {
+  const { treatments } = useTreatments();
   const [form, setForm] = useState({
     name: '', email: '', phone: '', treatment: '', message: '',
   });
@@ -88,7 +89,7 @@ function Contact() {
                         onChange={handleChange}
                       >
                         <option value="">Select a treatment</option>
-                        {TREATMENTS.map((t) => (
+                        {treatments.map((t) => (
                           <option key={t.slug} value={t.label}>{t.label}</option>
                         ))}
                         <option value="Not sure">Not sure yet</option>

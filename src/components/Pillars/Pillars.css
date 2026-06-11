@@ -57,10 +57,9 @@
 }
 
 .pillar-card__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--color-dark);
-  opacity: 0.7;
 }
 
 /* ── Tablet ── */
@@ -74,6 +73,7 @@
   .pillars { padding: 60px 0; }
   .pillars__grid { grid-template-columns: 1fr; gap: 2px; }
   .pillar-card { padding: 40px 28px; }
-  .pillar-card__title { font-size: 18px; }
+  .pillar-card__title { font-size: 19px; }
+  .pillar-card__text { font-size: 15px; }
   .pillars__head { margin-bottom: 48px; }
 }

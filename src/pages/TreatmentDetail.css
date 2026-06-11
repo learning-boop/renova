@@ -201,7 +201,7 @@
   font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(28px, 3vw, 44px);
   font-weight: 300;
-  color: rgba(196, 170, 148, 0.45);
+  color: rgba(196, 170, 148, 0.75);
   line-height: 1;
   transition: color 0.3s;
 }
@@ -211,10 +211,10 @@
 }
 
 .td-faq-q {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(196, 170, 148, 0.78);
+  color: rgba(196, 170, 148, 1);
   line-height: 1.6;
   font-weight: 500;
 }
@@ -249,10 +249,10 @@
 }
 
 .td-faq-answer-text {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 1.2px;
   line-height: 2.1;
-  color: rgba(196, 170, 148, 0.6);
+  color: rgba(196, 170, 148, 0.92);
   text-transform: uppercase;
   padding-bottom: 30px;
   max-width: 680px;
@@ -362,11 +362,11 @@
 }
 
 .td-editorial__quote-text {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 1.6px;
   line-height: 2.2;
   text-transform: uppercase;
-  color: rgba(75, 58, 48, 0.82);
+  color: rgba(75, 58, 48, 1);
   font-weight: 500;
 }
 
@@ -552,10 +552,10 @@
 }
 
 .td-prices__name {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(215, 200, 182, 0.78);
+  color: rgba(215, 200, 182, 1);
   font-weight: 500;
   line-height: 1.5;
   flex: 1;

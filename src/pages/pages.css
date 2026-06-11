@@ -23,7 +23,6 @@
   font-size: 16px;
   line-height: 1.85;
   color: var(--color-primary);
-  opacity: 0.85;
   max-width: 600px;
 }
 
@@ -75,10 +74,9 @@
 }
 
 .page-value-card__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--color-primary);
-  opacity: 0.8;
 }
 
 /* ─── Team Grid ───────────────────────────────────────────── */
@@ -106,10 +104,9 @@
 }
 
 .page-team-card__bio {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--color-primary);
-  opacity: 0.8;
 }
 
 /* ─── Services Page Grid ──────────────────────────────────── */
@@ -149,10 +146,9 @@
 }
 
 .services-page-card__tagline {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--color-primary);
-  opacity: 0.75;
   margin-bottom: 16px;
 }
 
@@ -333,10 +329,9 @@
 }
 
 .concern-card__desc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--color-primary);
-  opacity: 0.8;
   margin-bottom: 20px;
 }
 
@@ -473,7 +468,6 @@
   font-size: 15px;
   line-height: 1.8;
   color: var(--color-primary);
-  opacity: 0.85;
   padding: 0 0 20px;
   max-width: 620px;
 }
@@ -501,10 +495,10 @@
 }
 
 .faq-sidebar__text {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--color-cream);
-  opacity: 0.65;
+  opacity: 0.92;
 }
 
 .faq-sidebar__card .btn-primary,
@@ -620,7 +614,7 @@
   font-size: 15px;
   line-height: 1.8;
   color: var(--color-cream);
-  opacity: 0.75;
+  opacity: 0.92;
 }
 
 .contact-info__socials {
@@ -666,6 +660,14 @@
   .page-section {
     padding: 60px 0;
   }
+
+  .page-body-text { font-size: 16px; }
+  .page-value-card__text { font-size: 15px; }
+  .concern-card__desc { font-size: 15px; }
+  .faq-item__answer { font-size: 16px; }
+  .faq-item__question { font-size: 16px; }
+  .services-page-card__tagline { font-size: 15px; }
+  .services-page-card__title { font-size: 20px; }
 
   .page-two-col {
     grid-template-columns: 1fr;

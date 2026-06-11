@@ -60,10 +60,9 @@
 }
 
 .step__text {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
   color: var(--color-dark);
-  opacity: 0.7;
 }
 
 /* ── Tablet ── */
@@ -86,5 +85,6 @@
   }
   .step { padding: 0 8px; }
   .step__number { width: 48px; height: 48px; font-size: 17px; }
-  .step__title { font-size: 16px; }
+  .step__title { font-size: 17px; }
+  .step__text { font-size: 15px; }
 }
