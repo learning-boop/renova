@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTreatments } from '../../context/TreatmentsContext';
 import { useAppointment } from '../../context/AppointmentContext';
+import { client, MAIN_TREATMENTS_QUERY } from '../../lib/sanityClient';
 import './Header.css';
 
 const MAIN_TREATMENTS = [
@@ -24,19 +25,30 @@ const BOTTOM_NAV = [
 ]
 
 function Header() {
-  const [open, setOpen]           = useState(false);
+  const [open, setOpen]             = useState(false);
   const [activeMain, setActiveMain] = useState(null);
-  const navigate                  = useNavigate();
-  const { treatments }            = useTreatments();
-  const { openDrawer }            = useAppointment();
+  const [activePkg, setActivePkg]   = useState(null);
+  const [mainTreatments, setMainTreatments] = useState([]);
+  const navigate                    = useNavigate();
+  const { treatments }              = useTreatments();
+  const { openDrawer }              = useAppointment();
 
-  const close = () => { setOpen(false); setActiveMain(null); };
+  useEffect(() => {
+    client.fetch(MAIN_TREATMENTS_QUERY).then(setMainTreatments);
+  }, []);
+
+  const close = () => { setOpen(false); setActiveMain(null); setActivePkg(null); };
   const go    = (href) => { close(); navigate(href); };
 
-  // Pick image for right panel: hovered main treatment → nearest package image, else default
-  const panelImage = (activeMain !== null && treatments[activeMain]?.image)
-    ? treatments[activeMain].image
-    : '/assets/home_model.png';
+  // Right panel image: main treatment hover → mainTreatment image
+  //                    package hover        → signature package image
+  //                    default              → hero model
+  const panelImage =
+    activeMain !== null && mainTreatments[activeMain]?.image
+      ? mainTreatments[activeMain].image
+      : activePkg !== null && treatments[activePkg]?.image
+        ? treatments[activePkg].image
+        : '/assets/home_model.png';
 
   return (
     <>
@@ -114,6 +126,8 @@ function Header() {
                   key={t.slug}
                   className="nav-overlay__pkg-item"
                   style={{ animationDelay: open ? `${0.08 + i * 0.055}s` : '0s' }}
+                  onMouseEnter={() => setActivePkg(i)}
+                  onMouseLeave={() => setActivePkg(null)}
                   onClick={() => go(`/treatments/${t.slug}`)}
                 >
                   <span className="nav-overlay__pkg-num">{t.num}</span>
@@ -150,9 +164,9 @@ function Header() {
           <div className="nav-overlay__footer-links">
             <button onClick={close}>Instagram</button>
             <span className="nav-overlay__footer-dot">·</span>
-            <button onClick={() => go('/faq')}>Privacy Policy</button>
+            <button onClick={() => go('/privacy-policy')}>Privacy Policy</button>
             <span className="nav-overlay__footer-dot">·</span>
-            <button onClick={() => go('/faq')}>Terms</button>
+            <button onClick={() => go('/terms')}>Terms</button>
             <span className="nav-overlay__footer-dot">·</span>
             <button onClick={() => go('/contact')}>Location</button>
           </div>

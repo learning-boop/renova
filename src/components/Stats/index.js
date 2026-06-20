@@ -36,10 +36,6 @@ function Stats() {
         <span className="si-eyebrow">What We Offer</span>
         <h2 className="si-title">Our<br />Services</h2>
         <div className="si-divider" />
-        <Link to="/services" className="si-link">
-          Explore All Services
-          <span className="si-link-arrow">→</span>
-        </Link>
       </div>
 
     </section>

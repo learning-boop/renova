@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PageHero from '../components/PageHero';
 import { useTreatments } from '../context/TreatmentsContext';
+import { submitContact } from '../services/api';
 import './pages.css';
 
 function Contact() {
@@ -9,14 +10,31 @@ function Contact() {
     name: '', email: '', phone: '', treatment: '', message: '',
   });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError('');
+    try {
+      await submitContact({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        service: form.treatment,
+        message: form.message,
+      });
+      setSent(true);
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -107,8 +125,13 @@ function Contact() {
                       rows={5}
                     />
                   </div>
-                  <button type="submit" className="btn-primary contact-form__submit">
-                    Send Message
+                  {error && (
+                    <p style={{ color: '#e87f7f', fontSize: 13, fontFamily: 'Helvetica Neue, Arial, sans-serif', marginBottom: 8 }}>
+                      {error}
+                    </p>
+                  )}
+                  <button type="submit" className="btn-primary contact-form__submit" disabled={loading}>
+                    {loading ? 'Sending…' : 'Send Message'}
                   </button>
                 </form>
               )}

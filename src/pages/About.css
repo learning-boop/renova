@@ -629,7 +629,7 @@
   object-position: top center;
   display: block;
   transform-origin: center center;
-  margin-top: -20%;
+  /* margin-top: -20%; */
 }
 
 .ab-cta__right {

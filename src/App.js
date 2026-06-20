@@ -16,6 +16,10 @@ import SkinConcerns from './pages/SkinConcerns';
 import Testimonials from './pages/Testimonials';
 import FAQ          from './pages/FAQ';
 import Contact      from './pages/Contact';
+import PrivacyPolicy    from './pages/PrivacyPolicy';
+import TermsConditions  from './pages/TermsConditions';
+import ChatWidget       from './components/ChatWidget';
+import AIPreview        from './pages/AIPreview';
 
 function App() {
   return (
@@ -36,9 +40,13 @@ function App() {
         <Route path="/testimonials"         element={<Testimonials />} />
         <Route path="/faq"                  element={<FAQ />} />
         <Route path="/contact"              element={<Contact />} />
+        <Route path="/ai-preview"           element={<AIPreview />} />
+        <Route path="/privacy-policy"       element={<PrivacyPolicy />} />
+        <Route path="/terms"                element={<TermsConditions />} />
         <Route path="*"                     element={<Home />} />
       </Routes>
       <Footer />
+      <ChatWidget />
       </AppointmentProvider>
     </BrowserRouter>
     </TreatmentsProvider>

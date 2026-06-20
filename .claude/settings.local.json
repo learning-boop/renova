@@ -55,7 +55,8 @@
       "Bash(cd \"D:\\\\creative_touch\\\\renova\\\\studio-renova\" && SANITY_AUTH_TOKEN=\"sk0NR2pDES3dB67tWAKA84bEigeflvLAhbHtPfGqPRGOLuHDysP0ZlucpcYBIegjvknYbmBR5aC1r29krkS5NiskgwcV6mv1Xw7FTxqt67p2QOHaiXIryKneUC0NTRBdAfhVAOBJkhVA5xL8Wc2ervhKMOdE2lqapI0Diqkt2plSJrFkdkGP\" npx sanity deploy)",
       "Bash(cd \"D:\\\\creative_touch\\\\renova\\\\studio-renova\" && npx sanity deploy --yes)",
       "Bash(cd \"D:\\\\creative_touch\\\\renova\\\\studio-renova\" && npx sanity deploy --yes --url creative-touch-renova)",
-      "Bash(cd \"D:/creative_touch/renova/studio-renova\" && node scripts/push-before-after.mjs)"
+      "Bash(cd \"D:/creative_touch/renova/studio-renova\" && node scripts/push-before-after.mjs)",
+      "Bash(cd \"D:/creative_touch/renova-backend\" && npm install 2>&1)"
     ]
   }
 }

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useAppointment } from '../../context/AppointmentContext';
+import { useNavigate } from 'react-router-dom';
 import './BookingPopup.css';
 
 function BookingPopup() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible]     = useState(false);
   const [dismissed, setDismissed] = useState(false);
-  const { openDrawer } = useAppointment();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,35 +21,44 @@ function BookingPopup() {
 
   const dismiss = () => {
     setDismissed(true);
+    sessionStorage.setItem('ai-popup-dismissed', '1');
     setTimeout(() => setVisible(false), 400);
   };
 
-  const handleBook = () => {
+  const handleTryNow = () => {
     dismiss();
-    openDrawer();
+    navigate('/ai-preview');
   };
 
   if (!visible) return null;
 
   return (
-    <div className={`bp-popup ${dismissed ? 'bp-popup--out' : 'bp-popup--in'}`}>
-      <button className="bp-popup__close" onClick={dismiss} aria-label="Close">
-        <span /><span />
-      </button>
+    <>
+      <div className="bp-overlay" onClick={dismiss} />
+      <div className={`bp-popup ${dismissed ? 'bp-popup--out' : 'bp-popup--in'}`}>
+        <button className="bp-popup__close" onClick={dismiss} aria-label="Close">
+          <span /><span />
+        </button>
 
-      <span className="bp-popup__eyebrow">Creative Touch Renova</span>
+        <span className="bp-popup__eyebrow">Exclusive AI Feature</span>
 
-      <p className="bp-popup__heading">
-        Book an appointment,<br />
-        get a new version<br />
-        of yourself.
-      </p>
+        <p className="bp-popup__heading">
+          Curious how you'd look<br />
+          after your treatment?
+        </p>
 
-      <button className="bp-popup__cta" onClick={handleBook}>
-        Book Now
-        <span className="bp-popup__cta-arrow">→</span>
-      </button>
-    </div>
+        <p className="bp-popup__body">
+          Upload a photo and let our AI show you a personalised preview of your results — before you commit to a single appointment.
+        </p>
+
+        <button className="bp-popup__cta" onClick={handleTryNow}>
+          See My Results
+          <span className="bp-popup__cta-arrow">→</span>
+        </button>
+
+        <p className="bp-popup__disclaimer">AI simulation only. Individual results will vary.</p>
+      </div>
+    </>
   );
 }
 

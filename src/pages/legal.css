@@ -1,0 +1,121 @@
+/* ═══════════════════════════════════════════════════════════
+   LEGAL PAGES — Privacy Policy & Terms
+   ═══════════════════════════════════════════════════════════ */
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── Sidebar TOC ─────────────────────────────────────────── */
+
+.legal-toc {
+  position: sticky;
+  top: 100px;
+}
+
+.legal-toc__heading {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 18px;
+}
+
+.legal-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: none;
+}
+
+.legal-toc__link {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(31, 36, 36, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.legal-toc__link:hover {
+  color: var(--color-primary);
+}
+
+/* ── Body ────────────────────────────────────────────────── */
+
+.legal-intro {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(31, 36, 36, 0.65);
+  max-width: 680px;
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(18, 60, 63, 0.1);
+}
+
+.legal-section {
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid rgba(18, 60, 63, 0.08);
+  scroll-margin-top: 100px;
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+}
+
+.legal-section__title {
+  font-family: 'Cormorant', Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.legal-section__body p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.95;
+  color: rgba(31, 36, 36, 0.72);
+  margin-bottom: 14px;
+}
+
+.legal-section__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .legal-toc {
+    position: static;
+    padding: 24px;
+    background: rgba(18, 60, 63, 0.03);
+    border-left: 2px solid var(--color-gold);
+  }
+}
+
+@media (max-width: 600px) {
+  .legal-section__title {
+    font-size: 20px;
+  }
+
+  .legal-section__body p {
+    font-size: 13px;
+  }
+}

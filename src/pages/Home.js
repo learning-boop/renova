@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <BookingPopup />
+      {/* <BookingPopup /> */}
       <ScrollText />
       <TreatmentShowcase />
       <Stats />
