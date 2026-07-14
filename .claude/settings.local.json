@@ -57,7 +57,23 @@
       "Bash(cd \"D:\\\\creative_touch\\\\renova\\\\studio-renova\" && npx sanity deploy --yes --url creative-touch-renova)",
       "Bash(cd \"D:/creative_touch/renova/studio-renova\" && node scripts/push-before-after.mjs)",
       "Bash(cd \"D:/creative_touch/renova-backend\" && npm install 2>&1)",
-      "Skill(claude-in-chrome)"
+      "Skill(claude-in-chrome)",
+      "Bash(cd \"D:/creative_touch/renova\" && npx react-scripts build 2>&1 | tail -30)",
+      "Read(//c/Users/Admin/.config/sanity/**)",
+      "Bash(cat \"C:/Users/Admin/.config/sanity/config.json\" 2>/dev/null | python -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(k,'=',str\\(v\\)[:40]\\) for k,v in d.items\\(\\) if 'token' in k.lower\\(\\) or 'auth' in k.lower\\(\\)]\" 2>/dev/null || echo \"no token keys found\")",
+      "Bash(cd \"D:/creative_touch/renova\" && node scripts/generate-ndjson.mjs 2>&1)",
+      "Bash(cd \"D:/creative_touch/renova/studio-renova\" && npx sanity dataset import ../scripts/blog-posts.ndjson production --replace 2>&1)",
+      "Bash(cd \"D:/creative_touch/renova\" && SANITY_API_TOKEN=skjArPImLPmItgMv8btIggqdfuG9unGowX5j09apNdNK3DE71m35rfz9apB0te4ur0NMaGfpbvswPkjaCQ0V2WWzfs8hY6M6IrhUgEkMYacxkdJqElNLD38oeu14ZrfRqiInbTe0ftdTzNNB7TIxAsLfSh5hHg1z9e7FzK0QEMSDH5orss0M node scripts/import-blog-posts.mjs 2>&1)",
+      "Bash(cd \"D:/creative_touch/renova/studio-renova\" && npx sanity deploy 2>&1)",
+      "Bash(cd \"D:/creative_touch/renova\" && npx react-scripts build 2>&1 | tail -15)",
+      "Bash(curl -s -X POST https://renova-backend-liard.vercel.app/api/chat/message \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"messages\":[],\"message\":\"Hello, what treatments do you offer?\"}' \\\\\n  -w \"\\\\n\\\\nHTTP_STATUS:%{http_code}\")",
+      "Bash(curl -s -X POST https://renova-backend-liard.vercel.app/api/chat/message \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"messages\":[{\"role\":\"user\",\"content\":\"Hello, what treatments do you offer?\"},{\"role\":\"assistant\",\"content\":\"We offer anti-wrinkle, fillers, skin boosters and more.\"}],\"message\":\"Tell me more about anti-wrinkle treatments\"}' \\\\\n  -w \"\\\\n\\\\nHTTP_STATUS:%{http_code}\")",
+      "Bash(curl -s -X POST https://renova-backend-liard.vercel.app/api/appointments \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"name\":\"Test User\",\"email\":\"test@example.com\",\"phone\":\"07900000000\",\"service\":\"anti-wrinkle\",\"preferred_date\":\"2026-07-20\",\"preferred_time\":\"10:00 AM\",\"notes\":\"API test - please ignore\"}' \\\\\n  -w \"\\\\n\\\\nHTTP_STATUS:%{http_code}\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(cd \"D:\\\\creative_touch\\\\renova\" && npm run build 2>&1 | tail -20)",
+      "Bash(cd \"D:\\\\creative_touch\\\\renova\" && npm install --save-dev cross-env)"
     ]
   }
 }
