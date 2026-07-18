@@ -148,7 +148,7 @@ function TreatmentShowcase() {
   useEffect(() => {
     client.fetch(MAIN_TREATMENTS_QUERY).then((data) => {
       setTreatments(
-        data.map((t, i) => ({
+        data.slice(0, 8).map((t, i) => ({
           id: i + 1,
           title: t.label,
           slug: t.slug,

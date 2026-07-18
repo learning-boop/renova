@@ -5,13 +5,12 @@ import './Header.css';
 
 const NAV_LINKS = [
   { label: 'Home',           href: '/' },
-  { label: 'Treatment',      href: '/treatments' },
+  { label: 'Treatments',     href: '/treatments' },
   { label: 'Before & After', href: '/gallery' },
   { label: 'About',          href: '/about' },
-  { label: 'Blogs',          href: '/blog' },
+  { label: 'Blog',           href: '/blog' },
   { label: 'FAQs',           href: '/faq' },
   { label: 'Contact Us',     href: '/contact' },
-  { label: 'Training',       href: '/training' },
 ];
 
 function Header() {

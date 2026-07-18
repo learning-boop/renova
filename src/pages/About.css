@@ -1,568 +1,316 @@
-/* ─── HERO ──────────────────────────────────────────────── */
-.ab-hero {
-  position: relative;
-  min-height: 185vh;
+/* ─── SHARED UTILITIES ───────────────────────────────────── */
+.ab-eyebrow {
+  display: block;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 18px;
+}
+
+.ab-eyebrow--dark {
+  color: var(--color-primary);
+  opacity: 0.55;
+}
+
+.ab-eyebrow--gold {
+  color: var(--color-gold);
+}
+
+.ab-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: 24px 0;
+}
+
+/* ─── PROFILE ────────────────────────────────────────────── */
+.ab-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 680px;
+  background: var(--color-cream);
   overflow: hidden;
+}
+
+.ab-profile__img-col {
+  overflow: hidden;
+}
+
+.ab-profile__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.ab-profile__content-col {
+  padding: 80px 72px;
   display: flex;
   flex-direction: column;
-}
-
-/* will-change hints for GPU-composited parallax layers */
-.ab-hero__photo,
-.ab-quote__img,
-.ab-stat-hero__photo,
-.ab-stats__img--parallax,
-.ab-experience__photo,
-.ab-philosophy__img-main,
-.ab-philosophy__img-inset,
-.ab-why__split-img,
-.ab-why__split-photo,
-.ab-cta__img {
-  will-change: transform;
-}
-
-.ab-hero__name-bg {
-  position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(48px, 12vw, 150px);
-  font-weight: 300;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;  
-  color: var(--color-gold);
-  line-height: 1;
-  white-space: nowrap;
-  text-align: center;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-}
-
-.ab-hero__role {
-  position: absolute;
-  top: 50%;
-  left: 48px;
-  transform: translateY(-50%);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-cream);
-  opacity: 0.5;
-  line-height: 1.8;
-  z-index: 2;
-}
-
-.ab-hero__photo-wrap {
-  position: relative;
-  z-index: 2;
-  width: 52%;
-  max-width: 660px;
-  margin: 80px auto 0;
-  flex: 1;
-  display: flex;
-  align-items: flex-end;
-}
-
-.ab-hero__photo {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-
-.ab-hero__scroll {
-  position: absolute;
-  bottom: 40px;
-  right: 48px;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(200, 169, 106, 0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  color: var(--color-gold);
-  font-size: 16px;
-  z-index: 3;
 }
 
-/* ─── QUOTE ─────────────────────────────────────────────── */
-.ab-quote {
-  overflow: hidden;
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
-  width: 97vw;
-  padding-bottom: 80px;
-}
-
-.ab-quote__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 48px;
-}
-
-.ab-quote__left {
-  padding-top: 40px;
-}
-
-.ab-quote__marks {
-  font-family: Georgia, serif;
-  font-size: 80px;
-  line-height: 1;
-  color: var(--color-gold);
-  margin-bottom: 20px;
-  display: block;
-}
-
-.ab-quote__text {
+.ab-profile__name {
   font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(14px, 1vw, 20px);
-  font-weight: 700;
-  line-height: 1.85;
-  color: var(--color-dark);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-}
-.ab-hero-wrap{
-  position: relative;
-}
-
-
-.ab-quote__img {
-  width: 20vw;
-  height: 40vh;
+  color: var(--color-dark);
+  line-height: 1.05;
+  margin: 0 0 16px;
 }
 
-/* ─── FEATURED STAT ─────────────────────────────────────── */
-.ab-stat-hero {
-  background: white;
-  position: relative;
-  padding: 80px 0 0;
-  overflow: hidden;
-  text-align: center;
-}
-
-.ab-stat-hero__label {
-  font-size: 11px;
+.ab-profile__role {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  line-height: 1.7;
-  display: block;
-}
-
-.ab-stat-hero__number {
-  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(80px, 16vw, 220px);
-  font-weight: 300;
-  line-height: 0.85;
-  color: var(--color-gold);
-  opacity: 0.65;
-  letter-spacing: -0.02em;
-  position: relative;
-  z-index: 1;
-  display: block;
-  margin-top: 16px;
-}
-
-.ab-stat-hero__number sup {
-  font-size: 0.35em;
-  vertical-align: super;
-}
-
-.ab-stat-hero__photo-wrap {
-  position: relative;
-  z-index: 2;
-  margin: -120px auto 0;
-  width: 48%;
-  max-width: 500px;
-  overflow: hidden;
-}
-
-.ab-stat-hero__photo {
-  width: 100%;
-  display: block;
-  transform-origin: center center;
-}
-
-/* ─── STATS GRID ─────────────────────────────────────────── */
-.ab-stats {
-  background: white;
-  padding: 60px 0;
-}
-
-.ab-stats__inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.ab-stats__img-wrap {
-  height: 580px;
-  overflow: hidden;
-}
-
-.ab-stats__img {
-  width: 100%;
-  height: 140%;
-  object-fit: cover;
-  object-position: center;
-  margin-top: -20%;
-}
-
-.ab-stats__grid {
-  padding: 40px 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 48px;
-  column-gap: 48px;
-}
-
-.ab-stats__item {
-  border-bottom: 1px solid rgba(18, 60, 63, 0.1);
-  padding-bottom: 20px;
-}
-
-.ab-stats__num {
-  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(44px, 5vw, 72px);
-  font-weight: 300;
-  color: var(--color-gold);
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
-.ab-stats__desc {
-  font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-primary);
-  line-height: 1.7;
-  opacity: 0.65;
+  opacity: 0.6;
+  line-height: 1.9;
+  margin: 0;
 }
 
-/* ─── EXPERIENCE ─────────────────────────────────────────── */
-.ab-experience {
+.ab-profile__credentials-line {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin: 0 0 24px;
+}
+
+.ab-profile__quote {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--color-dark);
+  opacity: 0.75;
+  margin: 0;
+  border-left: 2px solid var(--color-gold);
+  padding-left: 20px;
+}
+
+/* ─── STATS BAND ─────────────────────────────────────────── */
+.ab-stats-band {
+  background: var(--color-dark);
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid rgba(200, 169, 106, 0.12);
+}
+
+.ab-stats-band__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 52px 24px;
+  border-right: 1px solid rgba(200, 169, 106, 0.1);
+  text-align: center;
+  gap: 12px;
+}
+
+.ab-stats-band__item:last-child {
+  border-right: none;
+}
+
+.ab-stats-band__num {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 300;
+  color: var(--color-gold);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.ab-stats-band__label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  opacity: 0.45;
+  line-height: 1.8;
+}
+
+/* ─── CREDENTIALS ────────────────────────────────────────── */
+.ab-credentials {
+  background: white;
+  padding: 100px 0;
+}
+
+.ab-credentials__inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 64px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.ab-credentials__title {
+  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-dark);
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+.ab-credentials__desc {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-primary);
+  opacity: 0.65;
+  margin: 0;
+}
+
+.ab-credentials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(18, 60, 63, 0.08);
+  border: 1px solid rgba(18, 60, 63, 0.08);
+}
+
+.ab-credentials__card {
+  background: white;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ab-credentials__card-num {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.ab-credentials__card-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ─── BIOGRAPHY ──────────────────────────────────────────── */
+.ab-bio {
   background: var(--color-cream);
   overflow: hidden;
-  padding: 80px 0;
 }
 
-.ab-experience__inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 48px;
+.ab-bio__inner {
   display: grid;
-  grid-template-columns: 70px 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
   min-height: 640px;
 }
 
-.ab-experience__vert-text {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(24px, 3.2vw, 48px);
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-gold);
-  white-space: nowrap;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-}
-
-.ab-experience__photo-wrap {
-  overflow: hidden;
-  height: 560px;
-}
-
-.ab-experience__photo {
-  width: 100%;
-  height: 145%;
-  object-fit: cover;
-  object-position: top center;
-  margin-top: -22%;
-}
-
-.ab-experience__cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.ab-experience__card {
-  border: 1px solid rgba(200, 169, 106, 0.2);
-  padding: 28px 22px;
-  min-height: 150px;
-}
-
-.ab-experience__card-text {
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--color-dark);
-  line-height: 1.95;
-}
-
-/* ─── PHILOSOPHY ─────────────────────────────────────────── */
-.ab-philosophy {
-  background: white;
-  padding: 100px 0;
-  overflow: hidden;
-}
-
-.ab-philosophy__inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 48px;
-}
-
-.ab-philosophy__header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  margin-bottom: 80px;
-}
-
-.ab-philosophy__title {
-  font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(52px, 8vw, 120px);
-  font-weight: 300;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  line-height: 0.95;
-  letter-spacing: 0.08em;
-}
-
-.ab-philosophy__subtitle-block {
-  padding-top: 24px;
-}
-
-.ab-philosophy__subtitle-label {
-  font-size: 10px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: 10px;
-  display: block;
-}
-
-.ab-philosophy__subtitle {
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  font-weight: 600;
-  line-height: 1.7;
-}
-
-.ab-philosophy__content {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  align-items: start;
-  gap: 100px;
-}
-
-.ab-philosophy__images {
-  position: relative;
-}
-
-.ab-philosophy__img-main-wrap {
-  overflow: hidden;
-  width: 49vw;
-  height: 100vh;
-}
-
-.ab-philosophy__img-main {
-  width: 100%;
-  height: 145%;
-  object-fit: cover;
-  transform-origin: center center;
-  margin-top: -22%;
-}
-
-.ab-philosophy__img-inset {
-  position: absolute;
-  top: -97px;
-  right: -63px;
-  width: 17vw;
-  height: 220px;
-}
-
-.ab-philosophy__deco-bar {
-  position: absolute;
-  top: -24px;
-  right: -50px;
-  width: 60px;
-  height: 60px;
-  background: var(--color-gold);
-  opacity: 0.25;
-}
-
-.ab-philosophy__quote-block {
-  padding-top: 0;
-}
-
-.ab-philosophy__quote-marks {
-  font-family: Georgia, serif;
-  font-size: 56px;
-  line-height: 1;
-  color: var(--color-gold);
-  opacity: 0.4;
-  display: block;
-  margin-bottom: 16px;
-}
-
-.ab-philosophy__quote-text {
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  line-height: 2;
-  margin-bottom: 48px;
-  opacity: 0.8;
-}
-
-.ab-philosophy__principles {
+.ab-bio__content-col {
+  padding: 80px 72px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.ab-philosophy__principle {
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(18, 60, 63, 0.08);
-}
-
-.ab-philosophy__principle:first-child {
-  border-top: 1px solid rgba(18, 60, 63, 0.08);
-}
-
-.ab-philosophy__principle-num {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--color-gold);
-  display: block;
-  margin-bottom: 6px;
-}
-
-.ab-philosophy__principle-title {
+.ab-bio__title {
   font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: 19px;
-  font-weight: 400;
+  font-size: clamp(36px, 4vw, 60px);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--color-dark);
-  margin-bottom: 6px;
+  line-height: 1.1;
+  margin: 0;
 }
 
-.ab-philosophy__principle-text {
-  font-size: 13px;
-  line-height: 1.75;
+.ab-bio__text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 2;
   color: var(--color-primary);
   opacity: 0.75;
+  margin: 0 0 20px;
+}
+
+.ab-bio__text:last-child {
+  margin-bottom: 0;
+}
+
+.ab-bio__img-col {
+  overflow: hidden;
+}
+
+.ab-bio__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 /* ─── WHY CHOOSE ─────────────────────────────────────────── */
 .ab-why {
   background: var(--color-dark);
-  overflow: hidden;
+  padding: 100px 0;
 }
 
-.ab-why__split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 560px;
-}
-
-.ab-why__split-left {
-  padding: 80px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 48px;
-}
-
-.ab-why__split-quote {
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--color-cream);
-  line-height: 2;
-  opacity: 0.6;
-}
-
-.ab-why__split-img-wrap {
-  width: 220px;
-  height: 290px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.ab-why__split-img {
-  width: 100%;
-  height: 145%;
-  object-fit: cover;
-  margin-top: -22%;
-}
-
-.ab-why__split-right {
-  position: relative;
-  overflow: hidden;
-}
-
-.ab-why__split-photo {
-  width: 100%;
-  height: 145%;
-  object-fit: cover;
-  display: block;
-  margin-top: -22%;
-}
-
-.ab-why__accordion-section {
-  padding: 80px 0;
-}
-
-.ab-why__accordion-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-  max-width: 1400px;
+.ab-why__inner {
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 64px;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: start;
 }
 
-.ab-why__accordion-title {
+.ab-why__header {
+  position: sticky;
+  top: 120px;
+}
+
+.ab-why__title {
   font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(40px, 5vw, 76px);
+  font-size: clamp(36px, 4vw, 60px);
   font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--color-gold);
-  position: relative;
-  top: -54vh;
-  line-height: 1.05;
-  letter-spacing: 0.1em;
+  line-height: 1.1;
+  margin: 0;
+  opacity: 0.85;
 }
 
-.ab-why__items {
+.ab-why__accordion {
   display: flex;
   flex-direction: column;
 }
 
 .ab-why__item {
-  border-bottom: 1px solid rgba(200, 169, 106, 0.18);
+  border-bottom: 1px solid rgba(200, 169, 106, 0.15);
+}
+
+.ab-why__item:first-child {
+  border-top: 1px solid rgba(200, 169, 106, 0.15);
 }
 
 .ab-why__item-btn {
@@ -570,15 +318,16 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 0;
-  font-size: 10px;
+  padding: 22px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-cream);
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-family: var(--font-sans);
   text-align: left;
   gap: 16px;
   transition: color 0.2s;
@@ -589,203 +338,228 @@
 }
 
 .ab-why__item-icon {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-gold);
   flex-shrink: 0;
-  opacity: 0.55;
+  opacity: 0.6;
+  line-height: 1;
 }
 
-.ab-why__item-content {
+.ab-why__item-body {
   overflow: hidden;
-  transition: max-height 0.35s ease;
   max-height: 0;
+  transition: max-height 0.35s ease;
 }
 
-.ab-why__item-content--open {
-  max-height: 200px;
+.ab-why__item-body--open {
+  max-height: 220px;
 }
 
 .ab-why__item-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
-  line-height: 1.85;
+  line-height: 1.9;
   color: var(--color-cream);
   opacity: 0.55;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
-/* ─── BOOK A VISIT CTA ───────────────────────────────────── */
+/* ─── CTA ────────────────────────────────────────────────── */
 .ab-cta {
-  background: var(--color-dark);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 500px;
-  border-top: 1px solid rgba(200, 169, 106, 0.08);
+  min-height: 560px;
+  background: var(--color-dark);
+  border-top: 1px solid rgba(200, 169, 106, 0.1);
 }
 
-.ab-cta__img-wrap {
+.ab-cta__img-col {
   overflow: hidden;
-  max-height: 600px;
 }
 
 .ab-cta__img {
   width: 100%;
-  height: 140%;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
   display: block;
-  transform-origin: center center;
-  /* margin-top: -20%; */
 }
 
-.ab-cta__right {
+.ab-cta__content-col {
+  padding: 80px 72px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  padding: 80px;
-  gap: 32px;
-}
-
-.ab-cta__circle {
-  width: 80px;
-  height: 80px;
-  border: 1px solid rgba(200, 169, 106, 0.35);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: var(--color-gold);
-  opacity: 0.55;
-  flex-shrink: 0;
+  gap: 0;
 }
 
 .ab-cta__title {
   font-family: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(48px, 7.5vw, 110px);
+  font-size: clamp(40px, 5vw, 72px);
   font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--color-gold);
-  opacity: 0.5;
-  line-height: 1.0;
-  letter-spacing: 0.1em;
+  line-height: 1.05;
+  margin: 0 0 24px;
+  opacity: 0.85;
 }
 
-/* ─── RESPONSIVE ─────────────────────────────────────────── */
-@media (max-width: 1200px) {
-  .ab-stats__grid { padding: 40px; }
-  .ab-experience__inner { gap: 40px; }
-  .ab-philosophy__inner { padding: 0 32px; }
-  .ab-why__accordion-inner { padding: 0 32px; }
-  .ab-philosophy__img-main-wrap { width: 44vw; }
+.ab-cta__text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-cream);
+  opacity: 0.55;
+  margin: 0 0 36px;
 }
 
+/* ─── RESPONSIVE — TABLET (≤1024px) ─────────────────────── */
 @media (max-width: 1024px) {
-  .ab-experience__inner {
-    grid-template-columns: 1fr 1fr;
-    padding: 0 32px;
-  }
-  .ab-experience__vert-text { display: none; }
-  .ab-why__accordion-inner {
-    grid-template-columns: 1fr;
+  .ab-credentials__inner,
+  .ab-why__inner {
+    padding: 0 40px;
     gap: 48px;
-    padding: 0 32px;
   }
-  /* top: -54vh only works on large desktop; reset on tablet */
-  .ab-why__accordion-title {
+
+  .ab-profile__content-col,
+  .ab-bio__content-col,
+  .ab-cta__content-col {
+    padding: 64px 48px;
+  }
+
+  .ab-why__header {
     position: static;
-    top: 0;
   }
-  .ab-philosophy__header,
-  .ab-philosophy__content {
-    gap: 48px;
-  }
-  .ab-quote__inner { padding: 0 32px; }
 }
 
+/* ─── RESPONSIVE — MOBILE (≤768px) ──────────────────────── */
 @media (max-width: 768px) {
-  /* ── HERO: restructure for mobile (Option 2) ── */
-  /* Remove the 185vh void — let height follow content */
-  .ab-hero {
+  /* Profile: stack — image top, content below */
+  .ab-profile {
+    grid-template-columns: 1fr;
     min-height: auto;
-    padding-top: 72px;   /* clear the fixed header */
-    padding-bottom: 0;
   }
 
-  /* Name: pull out of absolute positioning so it sits at the very top */
-  .ab-hero__name-bg {
-    position: relative;
-    top: auto;
-    transform: none;
-    font-size: clamp(36px, 13vw, 68px);
-    letter-spacing: 0.08em;
-    padding: 28px 16px 20px;
-    text-align: center;
-    width: 100%;
+  .ab-profile__img-col {
+    height: 72vw;
+    max-height: 420px;
   }
 
-  /* Photo: flows directly below the name, no top margin gap */
-  .ab-hero__photo-wrap {
-    width: 88%;
-    margin: 0 auto;
-    flex: none;           /* don't grow to fill 185vh void */
+  .ab-profile__img {
+    height: 100%;
+    object-position: top center;
   }
 
-  .ab-hero__role { display: none; }
-  .ab-hero__scroll { display: none; }
-
-  /* Quote: was position:absolute overlapping the photo — make it flow normally */
-  .ab-quote {
-    position: relative;
-    bottom: auto;
-    width: 100%;
-    padding: 20px 0 32px;
+  .ab-profile__content-col {
+    padding: 48px 24px;
   }
 
-  .ab-quote__inner {
-    flex-direction: column;
-    gap: 16px;
+  /* Stats band: wrap to 2-column grid on mobile */
+  .ab-stats-band {
+    flex-wrap: wrap;
+  }
+
+  .ab-stats-band__item {
+    flex: 0 0 50%;
+    border-right: 1px solid rgba(200, 169, 106, 0.1);
+    border-bottom: 1px solid rgba(200, 169, 106, 0.1);
+    padding: 36px 16px;
+  }
+
+  .ab-stats-band__item:nth-child(even) {
+    border-right: none;
+  }
+
+  .ab-stats-band__item:nth-last-child(-n+1),
+  .ab-stats-band__item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  /* Credentials: stack */
+  .ab-credentials {
+    padding: 64px 0;
+  }
+
+  .ab-credentials__inner {
+    grid-template-columns: 1fr;
     padding: 0 24px;
+    gap: 40px;
   }
 
-  /* Remove bottom image on mobile — show content only */
-  .ab-quote__img {
-    display: none;
+  .ab-credentials__grid {
+    grid-template-columns: 1fr;
   }
 
-  .ab-stat-hero__photo-wrap { width: 75%; margin-top: -80px; }
+  /* Biography: stack — content top, image below */
+  .ab-bio__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
 
-  .ab-stats__inner { grid-template-columns: 1fr; }
-  .ab-stats__img-wrap { height: 260px; }
-  .ab-stats__grid { padding: 40px 24px; grid-template-columns: 1fr 1fr; }
+  .ab-bio__content-col {
+    padding: 48px 24px;
+    order: 1;
+  }
 
-  .ab-experience__inner { grid-template-columns: 1fr; padding: 0 24px; }
-  .ab-experience__photo-wrap { height: 360px; }
-  .ab-experience__cards { grid-template-columns: 1fr; }
+  .ab-bio__img-col {
+    order: 2;
+    height: 72vw;
+    max-height: 420px;
+  }
 
-  .ab-philosophy__inner { padding: 0 24px; }
-  .ab-philosophy__header,
-  .ab-philosophy__content { grid-template-columns: 1fr; gap: 40px; }
-  /* Fix: hardcoded 49vw becomes full width in single-column layout */
-  .ab-philosophy__img-main-wrap { width: 100%; height: 60vw; }
-  .ab-philosophy__img-inset,
-  .ab-philosophy__deco-bar { display: none; }
+  .ab-bio__img {
+    height: 100%;
+  }
 
-  .ab-why__split { grid-template-columns: 1fr; }
-  .ab-why__split-right { min-height: 380px; }
-  .ab-why__split-left { padding: 60px 24px; }
-  .ab-why__accordion-inner { padding: 0 24px; grid-template-columns: 1fr; gap: 24px; }
-  /* Fix: top: -54vh breaks layout on mobile */
-  .ab-why__accordion-title {
+  /* Why Choose: stack */
+  .ab-why {
+    padding: 64px 0;
+  }
+
+  .ab-why__inner {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 40px;
+  }
+
+  .ab-why__header {
     position: static;
-    top: 0;
-    white-space: normal;
-    word-break: break-word;
-    font-size: clamp(28px, 8vw, 52px);
-    padding-bottom: 8px;
   }
 
-  .ab-cta { grid-template-columns: 1fr; }
-  .ab-cta__img-wrap { min-height: 360px; max-height: 360px; }
-  .ab-cta__right { padding: 60px 24px; }
+  /* CTA: stack — image top, content below */
+  .ab-cta {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ab-cta__img-col {
+    height: 72vw;
+    max-height: 400px;
+  }
+
+  .ab-cta__img {
+    height: 100%;
+  }
+
+  .ab-cta__content-col {
+    padding: 48px 24px;
+  }
+}
+
+/* ─── RESPONSIVE — SMALL MOBILE (≤480px) ────────────────── */
+@media (max-width: 480px) {
+  .ab-stats-band__item {
+    flex: 0 0 100%;
+    border-right: none;
+  }
+
+  .ab-stats-band__item:nth-last-child(-n+1) {
+    border-bottom: none;
+  }
+
+  .ab-stats-band__item:not(:last-child) {
+    border-bottom: 1px solid rgba(200, 169, 106, 0.1);
+  }
 }

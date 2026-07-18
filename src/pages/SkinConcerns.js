@@ -8,22 +8,22 @@ const concerns = [
   {
     title: 'Wrinkles & Fine Lines',
     description: 'Expression lines, forehead creases, and crow\'s feet softened with precision relaxant treatments.',
-    treatments: [{ label: 'Smooth Lines', slug: 'smooth-lines' }, { label: 'Full Face Refresh', slug: 'full-face-refresh' }],
+    treatments: [{ label: 'Firm & Lift', slug: 'firm-and-lift' }, { label: 'Non-Surgical Lift', slug: 'non-surgical-lift' }],
   },
   {
     title: 'Loss of Volume',
     description: 'Restore youthful plumpness and define contours with expertly placed dermal fillers.',
-    treatments: [{ label: 'Face Sculpt', slug: 'face-sculpt' }, { label: 'Full Face Refresh', slug: 'full-face-refresh' }],
+    treatments: [{ label: 'Sculpt & Define', slug: 'sculpt-and-define' }, { label: 'Non-Surgical Lift', slug: 'non-surgical-lift' }],
   },
   {
     title: 'Dull or Dehydrated Skin',
     description: 'Deeply nourish and illuminate the skin from within for a luminous, healthy glow.',
-    treatments: [{ label: 'Skin Glow', slug: 'skin-glow' }, { label: 'Collagen Restore', slug: 'collagen-restore' }],
+    treatments: [{ label: 'Glow & Hydrate', slug: 'glow-and-hydrate' }, { label: 'Even & Bright', slug: 'even-and-bright' }],
   },
   {
     title: 'Skin Laxity & Sagging',
     description: 'Tighten and firm the skin using bio-stimulating treatments that rebuild your skin\'s foundation.',
-    treatments: [{ label: 'Collagen Restore', slug: 'collagen-restore' }, { label: 'Neck Renewal', slug: 'neck-renewal' }],
+    treatments: [{ label: 'Firm & Lift', slug: 'firm-and-lift' }, { label: 'Neck & Décolletage Renewal', slug: 'neck-renewal' }],
   },
   {
     title: 'Acne & Blemishes',
@@ -31,19 +31,29 @@ const concerns = [
     treatments: [{ label: 'Clear Skin', slug: 'clear-skin' }],
   },
   {
-    title: 'Neck & Décolletage Aging',
+    title: 'Neck & Décolletage Ageing',
     description: 'Smooth bands, tighten loose skin, and improve texture across the neck and chest.',
-    treatments: [{ label: 'Neck Renewal', slug: 'neck-renewal' }],
+    treatments: [{ label: 'Neck & Décolletage Renewal', slug: 'neck-renewal' }],
   },
   {
-    title: 'Overall Aging Concerns',
-    description: 'A comprehensive protocol addressing multiple signs of aging in a single, cohesive plan.',
-    treatments: [{ label: 'Full Face Refresh', slug: 'full-face-refresh' }, { label: 'Stay Youthful', slug: 'stay-youthful' }],
+    title: 'Pigmentation & Uneven Tone',
+    description: 'Gradually lift dark spots, sun damage and uneven skin tone with a medically guided plan.',
+    treatments: [{ label: 'Even & Bright', slug: 'even-and-bright' }],
+  },
+  {
+    title: 'Overall Ageing Concerns',
+    description: 'A comprehensive plan addressing multiple signs of ageing with a cohesive, staged approach.',
+    treatments: [{ label: 'Non-Surgical Lift', slug: 'non-surgical-lift' }, { label: 'Firm & Lift', slug: 'firm-and-lift' }],
+  },
+  {
+    title: 'Tired or Hollow Eyes',
+    description: 'Address dark circles, hollowing and crepey under-eye skin with a personalised assessment.',
+    treatments: [{ label: 'Under-Eye Refresh', slug: 'under-eye-refresh' }],
   },
   {
     title: 'Preventative & Maintenance',
-    description: 'Get ahead of aging with a proactive programme designed to keep your skin at its best for years to come.',
-    treatments: [{ label: 'Stay Youthful', slug: 'stay-youthful' }],
+    description: 'Get ahead of ageing with a proactive programme designed to keep your skin at its best for years to come.',
+    treatments: [{ label: 'Glow & Hydrate', slug: 'glow-and-hydrate' }, { label: 'Even & Bright', slug: 'even-and-bright' }],
   },
 ];
 

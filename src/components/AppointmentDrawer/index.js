@@ -128,7 +128,7 @@ function AppointmentDrawer() {
                   <input
                     className="appt-drawer__input"
                     type="tel"
-                    placeholder="+1 000 000 0000"
+                    placeholder="+44 7..."
                     value={form.phone}
                     onChange={set('phone')}
                   />

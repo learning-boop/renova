@@ -15,7 +15,7 @@ const faqs = [
       },
       {
         q: 'Are your practitioners medically qualified?',
-        a: 'Yes. All treatments at Creative Touch are performed or overseen by medically qualified practitioners with specialist training in aesthetic medicine.',
+        a: 'Yes. All treatments at Kensley Aesthetics are performed or overseen by medically qualified practitioners with specialist training in aesthetic medicine.',
       },
       {
         q: 'How do I know which treatment is right for me?',
@@ -32,7 +32,7 @@ const faqs = [
       },
       {
         q: 'How long do results last?',
-        a: 'This varies by treatment. Relaxant injections typically last 3–4 months, dermal fillers 9–18 months, and skin-boosting treatments several weeks. Your practitioner will give you a realistic expectation during your consultation.',
+        a: 'This varies by treatment. Relaxant injections typically last 3–4 months, dermal fillers 9–18 months, and skin-boosting treatments such as Profhilo typically last several months (commonly reviewed at around 6 months). Your practitioner will give you a realistic expectation during your consultation.',
       },
       {
         q: 'Is there any downtime after treatment?',
@@ -53,7 +53,7 @@ const faqs = [
       },
       {
         q: 'What should I do before my appointment?',
-        a: 'Avoid blood-thinning medications (such as ibuprofen or aspirin) where possible, stay hydrated, and arrive with a clean face. We will provide full pre-treatment instructions when you book.',
+        a: 'Where possible, avoid over-the-counter blood-thinning medication such as ibuprofen or aspirin for 24–48 hours before treatment — but never stop prescribed medication without your doctor\'s advice first. Stay hydrated and arrive with a clean face. We will provide full pre-treatment instructions when you book.',
       },
       {
         q: 'What aftercare do I need?',
@@ -127,7 +127,7 @@ function FAQ() {
                 <p className="faq-sidebar__text">
                   Explore our full range of treatments and find the right one for your skin.
                 </p>
-                <Link to="/services" className="btn-outline" style={{ marginTop: 24 }}>
+                <Link to="/treatments" className="btn-outline" style={{ marginTop: 24 }}>
                   View All Treatments
                 </Link>
               </div>

@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     name: 'Charlotte R.',
-    location: 'Surrey',
+    location: 'Newcastle',
     treatment: 'Smooth Lines',
     rating: 5,
     quote: 'I\'ve tried other clinics before but nothing compares to the care and expertise here. My forehead lines have softened beautifully and I still look like me.',
@@ -28,7 +28,7 @@ const testimonials = [
   },
   {
     name: 'Sophie T.',
-    location: 'Kent',
+    location: 'Newcastle',
     treatment: 'Collagen Restore',
     rating: 5,
     quote: 'Six weeks in and the difference is remarkable. My skin feels firmer and looks so much healthier. I wish I\'d started this sooner.',
@@ -42,7 +42,7 @@ const testimonials = [
   },
   {
     name: 'Emma L.',
-    location: 'Essex',
+    location: 'Newcastle',
     treatment: 'Clear Skin',
     rating: 5,
     quote: 'After years of struggling with my skin, I finally feel confident without makeup. The Clear Skin protocol genuinely changed my life. Thank you.',

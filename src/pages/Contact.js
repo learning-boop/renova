@@ -164,14 +164,14 @@ function Contact() {
                 <p className="section-label">Contact</p>
                 <p className="contact-info__text">
                   hello@kensleyaesthetics.co.uk<br />
-                  07906 99154
+                  07920 699154
                 </p>
               </div>
               <div className="contact-info__block">
                 <p className="section-label">Follow Us</p>
                 <div className="contact-info__socials">
-                  <span className="contact-info__social-link">Instagram</span>
-                  <span className="contact-info__social-link">Facebook</span>
+                  <a href="https://www.instagram.com/kensleyaesthetics/" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">Instagram</a>
+                  <a href="https://www.facebook.com/profile.php?id=61591977870031" target="_blank" rel="noopener noreferrer" className="contact-info__social-link">Facebook</a>
                 </div>
               </div>
             </aside>

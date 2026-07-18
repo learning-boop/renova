@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useTreatments } from '../../context/TreatmentsContext';
 import './Footer.css';
 
 const MAIN_TREATMENTS = [
@@ -14,7 +13,6 @@ const MAIN_TREATMENTS = [
 ];
 
 function Footer() {
-  const { treatments } = useTreatments();
   return (
     <footer className="ft-root">
       <div className="ft-inner">
@@ -45,27 +43,15 @@ function Footer() {
           </div>
 
           <div className="ft-col">
-            <h4 className="ft-col-heading">Signature Programmes</h4>
-            <ul className="ft-col-links">
-              {treatments.map((t) => (
-                <li key={t.slug}>
-                  <Link to={`/treatments/${t.slug}`}>{t.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="ft-col">
             <h4 className="ft-col-heading">Pages</h4>
             <ul className="ft-col-links">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/treatments">Treatment</Link></li>
+              <li><Link to="/treatments">Treatments</Link></li>
               <li><Link to="/gallery">Before &amp; After</Link></li>
               <li><Link to="/about">About</Link></li>
-              <li><Link to="/blog">Blogs</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/faq">FAQs</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
-              <li><Link to="/training">Training</Link></li>
             </ul>
           </div>
 
@@ -73,7 +59,7 @@ function Footer() {
             <h4 className="ft-col-heading">Contact</h4>
             <ul className="ft-col-links">
               <li><a href="mailto:hello@kensleyaesthetics.co.uk">hello@kensleyaesthetics.co.uk</a></li>
-              <li><a href="tel:07906991540">07906 99154</a></li>
+              <li><a href="tel:+447920699154">07920 699154</a></li>
               <li>Newcastle upon Tyne, United Kingdom</li>
             </ul>
             <Link to="/contact" className="ft-book-btn">Book an Appointment</Link>

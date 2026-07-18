@@ -42,7 +42,7 @@ function App() {
         <Route path="/main-treatments/:slug" element={<MainTreatmentDetail />} />
         <Route path="/gallery"              element={<Gallery />} />
         <Route path="/skin-concerns"        element={<SkinConcerns />} />
-        <Route path="/testimonials`"         element={<Testimonials />} />
+        <Route path="/testimonials"          element={<Testimonials />} />
         <Route path="/faq"                  element={<FAQ />} />
         <Route path="/contact"              element={<Contact />} />
 

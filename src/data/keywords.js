@@ -1,7 +1,7 @@
 /**
  * Kensley Aesthetics — SEO Keywords
  * Source: High Search Volume Keyword List (102 keywords, 5 groups)
- * Target Markets: Newcastle | Newcastle | United States
+ * Target Markets: Newcastle | UK
  */
 
 export const PRIMARY_KEYWORDS = [
@@ -52,23 +52,23 @@ export const NEWCASTLE_KEYWORDS = [
 ];
 
 export const LONDON_KEYWORDS = [
-  'aesthetic clinic Newcastle',
-  'aesthetics clinic Newcastle',
-  'skin clinic Newcastle',
-  'dermal fillers Newcastle',
-  'lip fillers Newcastle',
-  'skin boosters Newcastle',
-  'Profhilo Newcastle',
-  'polynucleotides Newcastle',
-  'microneedling Newcastle',
-  'RF microneedling Newcastle',
-  'HIFU Newcastle',
-  'Sculptra Newcastle',
-  'tear trough filler Newcastle',
-  'jawline filler Newcastle',
-  'non-surgical facelift Newcastle',
-  'facial rejuvenation Newcastle',
-  'anti-wrinkle injections Newcastle',
+  'aesthetic clinic London',
+  'aesthetics clinic London',
+  'skin clinic London',
+  'dermal fillers London',
+  'lip fillers London',
+  'skin boosters London',
+  'Profhilo London',
+  'polynucleotides London',
+  'microneedling London',
+  'RF microneedling London',
+  'HIFU London',
+  'tear trough filler London',
+  'jawline filler London',
+  'non-surgical facelift London',
+  'facial rejuvenation London',
+  'anti-wrinkle injections London',
+  'aesthetic treatments London',
 ];
 
 export const NEAR_ME_KEYWORDS = [
@@ -134,12 +134,12 @@ export const TREATMENT_KEYWORDS = {
   'hifu':                    'HIFU Newcastle, HIFU treatment, non-surgical facelift, skin tightening near me',
 
   // Signature programmes
-  'smooth-lines':       'anti-wrinkle injections Newcastle, fine lines treatment, facial rejuvenation',
-  'face-sculpt':        'dermal fillers Newcastle, jawline filler, cheek filler, facial contouring',
-  'skin-glow':          'Profhilo Newcastle, skin boosters Newcastle, skin rejuvenation treatment',
-  'collagen-restore':   'Sculptra Newcastle, collagen stimulator, anti-ageing treatments Newcastle',
-  'clear-skin':         'microneedling Newcastle, microneedling for acne scars, skin tightening treatment',
-  'neck-renewal':       'HIFU Newcastle, skin tightening treatment, non-surgical facelift Newcastle',
-  'full-face-refresh':  'non-surgical facelift Newcastle, facial rejuvenation Newcastle, anti-ageing treatments',
-  'stay-youthful':      'anti-ageing treatments, skin rejuvenation, aesthetic clinic Newcastle',
+  'glow-and-hydrate':   'Profhilo Newcastle, skin boosters Newcastle, dull skin treatment, skin hydration',
+  'clear-skin':         'acne treatment Newcastle, microneedling for acne scars, acne scar treatment Newcastle',
+  'even-and-bright':    'pigmentation treatment Newcastle, dark spots treatment, skin tone Newcastle',
+  'firm-and-lift':      'skin tightening Newcastle, collagen stimulator, RF microneedling Newcastle',
+  'sculpt-and-define':  'dermal fillers Newcastle, jawline filler, cheek filler, facial contouring Newcastle',
+  'non-surgical-lift':  'non-surgical facelift Newcastle, HIFU Newcastle, thread lift Newcastle',
+  'under-eye-refresh':  'tear trough filler Newcastle, dark circles treatment, under eye treatment Newcastle',
+  'neck-renewal':       'neck rejuvenation Newcastle, décolletage treatment, HIFU neck Newcastle',
 };

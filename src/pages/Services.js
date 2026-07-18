@@ -155,7 +155,7 @@ export default function Services() {
           <em>We teach it.</em>
         </h2>
         <p className="tr-intro__body">
-          Creative Touch offers a curated suite of professional training programmes for
+          Kensley Aesthetics offers a curated suite of professional training programmes for
           doctors, nurses, and aesthetic practitioners. Our courses fuse cutting-edge clinical
           technique with deep anatomical knowledge — delivered by specialists who perform these
           treatments every single day. Whether you are stepping into aesthetics for the first time
@@ -211,7 +211,7 @@ export default function Services() {
       <section className="tr-why">
         <div className="tr-why__inner">
           <span className="tr-why__label">Why Choose Us</span>
-          <h2 className="tr-why__heading">THE CREATIVE TOUCH<br />DIFFERENCE</h2>
+          <h2 className="tr-why__heading">THE KENSLEY AESTHETICS<br />DIFFERENCE</h2>
           <div className="tr-why__grid">
             {WHY_ITEMS.map((w, i) => (
               <div className="tr-why__card" key={i}>

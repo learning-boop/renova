@@ -5,14 +5,14 @@ import { useAppointment } from '../../context/AppointmentContext';
 import './ChatWidget.css';
 
 const TREATMENTS = [
-  { slug: 'smooth-lines',      label: 'Smooth Lines' },
-  { slug: 'face-sculpt',       label: 'Face Sculpt' },
-  { slug: 'skin-glow',         label: 'Skin Glow' },
-  { slug: 'collagen-restore',  label: 'Collagen Restore' },
+  { slug: 'glow-and-hydrate',  label: 'Glow & Hydrate' },
   { slug: 'clear-skin',        label: 'Clear Skin' },
-  { slug: 'neck-renewal',      label: 'Neck Renewal' },
-  { slug: 'full-face-refresh', label: 'Full Face Refresh' },
-  { slug: 'stay-youthful',     label: 'Stay Youthful' },
+  { slug: 'even-and-bright',   label: 'Even & Bright' },
+  { slug: 'firm-and-lift',     label: 'Firm & Lift' },
+  { slug: 'sculpt-and-define', label: 'Sculpt & Define' },
+  { slug: 'non-surgical-lift', label: 'Non-Surgical Lift' },
+  { slug: 'under-eye-refresh', label: 'Under-Eye Refresh' },
+  { slug: 'neck-renewal',      label: 'Neck & Décolletage Renewal' },
 ];
 
 const WHATSAPP_NUMBER = '447920699154';
