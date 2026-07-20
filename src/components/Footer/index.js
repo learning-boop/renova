@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useAppointment } from '../../context/AppointmentContext';
 import './Footer.css';
 
 const MAIN_TREATMENTS = [
@@ -13,6 +14,8 @@ const MAIN_TREATMENTS = [
 ];
 
 function Footer() {
+  const { openDrawer } = useAppointment();
+
   return (
     <footer className="ft-root">
       <div className="ft-inner">
@@ -51,7 +54,6 @@ function Footer() {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/faq">FAQs</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -62,7 +64,7 @@ function Footer() {
               <li><a href="tel:+447920699154">07920 699154</a></li>
               <li>Newcastle upon Tyne, United Kingdom</li>
             </ul>
-            <Link to="/contact" className="ft-book-btn">Book an Appointment</Link>
+            <button onClick={openDrawer} className="ft-book-btn">Book an Appointment</button>
           </div>
 
         </div>

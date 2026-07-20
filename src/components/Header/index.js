@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { label: 'About',          href: '/about' },
   { label: 'Blog',           href: '/blog' },
   { label: 'FAQs',           href: '/faq' },
-  { label: 'Contact Us',     href: '/contact' },
 ];
 
 function Header() {
