@@ -43,6 +43,21 @@
   margin: 0;
 }
 
+.ba-header__logo-wrap {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-cream);
+  padding: 20px 40px;
+  margin: 32px -40px -40px;
+}
+
+.ba-header__logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  opacity: 0.92;
+}
+
 /* ── Iframe section ───────────────────────────────────────── */
 .ba-body {
   background: #f5f2ed;
