@@ -11,7 +11,7 @@ import ExpertSection       from '../components/ExpertSection';
 // import Pillars             from '../components/Pillars';
 // import Testimonials        from '../components/Testimonials';
 // import CtaSection          from '../components/CtaSection';
-import QuickContact        from '../components/QuickContact';
+// import QuickContact        from '../components/QuickContact';
 import HomeFaqSection      from '../components/HomeFaqSection';
 import JourneySteps        from '../components/JourneySteps';
 import SeoHead             from '../components/SeoHead';
@@ -53,7 +53,7 @@ function Home() {
       <BeforeAfter />
       <ExpertSection />
       <JourneySteps />
-      <QuickContact />
+      {/* <QuickContact /> */}
     </>
   );
 }
