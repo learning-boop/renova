@@ -33,8 +33,7 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 4.5px;
-  text-transform: uppercase;
+  letter-spacing: 1.5px;
   color: #0c0f0d;
 }
 
@@ -56,7 +55,6 @@
   font-size: clamp(52px, 7.2vw, 110px);
   font-weight: 700;
   line-height: 0.90;
-  text-transform: uppercase;
   letter-spacing: 0.03em;
   color: #0c0f0d;
   margin: 0;
@@ -99,8 +97,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.9;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
   color: #0c0f0d;
   margin: 0;
 }

@@ -8,7 +8,7 @@ const EMAILJS_PUBLIC_KEY  = '9BJmaeXydGuyEUSff';
 
 export default function QuickContact() {
   const [name, setName]       = useState('');
-  const [phone, setPhone]     = useState('');
+  const [email, setEmail]     = useState('');
   const [status, setStatus]   = useState('idle'); // idle | sending | success | error
 
   async function handleSubmit(e) {
@@ -18,12 +18,12 @@ export default function QuickContact() {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        { from_name: name, phone_number: phone },
+        { from_name: name, from_email: email },
         EMAILJS_PUBLIC_KEY
       );
       setStatus('success');
       setName('');
-      setPhone('');
+      setEmail('');
     } catch {
       setStatus('error');
     }
@@ -46,10 +46,10 @@ export default function QuickContact() {
         <div className="qc-field">
           <input
             className="qc-input"
-            type="tel"
-            placeholder="Phone Number"
-            value={phone}
-            onChange={e => setPhone(e.target.value.replace(/\D/g, ''))}
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             required
           />
         </div>

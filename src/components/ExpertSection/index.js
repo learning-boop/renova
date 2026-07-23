@@ -47,8 +47,8 @@ function ExpertSection() {
       {/* ── Large heading — drifts with cursor, sits behind center image ── */}
       <motion.div className="ep-heading-wrap" style={{ x: headX, y: headY }}>
         <h2 className="ep-heading">
-          The Finest Care<br />
-          And Expert Touch
+          the finest care<br />
+          and expert touch
         </h2>
       </motion.div>
 

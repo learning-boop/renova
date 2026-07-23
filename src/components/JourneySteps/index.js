@@ -95,8 +95,8 @@ export default function JourneySteps() {
     <section className="js-section">
       {/* Eyebrow */}
       <div className="js-eyebrow">
-        <p>7 Steps Toward</p>
-        <p>Your Transformation</p>
+        <p>7 steps toward</p>
+        <p>your transformation</p>
       </div>
 
       {/* Steps */}
